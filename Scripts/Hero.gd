@@ -11,9 +11,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	detect_objects()
+	detect_enemies()
 
-func detect_objects() -> void:
+func detect_enemies() -> void:
 	var temp_enemies : Array[Hero] = world_spawner.hero_list
 	var closest_dist : int = lock_range
 	var current_locked : Hero = null

@@ -22,4 +22,4 @@ func fire_bolt(dir : Vector2, char : Character) -> void:
 	temp_bolt.body.global_position = self_node.global_position
 	temp_bolt.body.apply_central_impulse(dir * shot_speed)
 	temp_bolt.body.rotation = char.body.rotation
-	temp_bolt.set_alliance(true)
+	temp_bolt.set_alliance(char.alliance)
