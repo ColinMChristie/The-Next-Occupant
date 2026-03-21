@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbto5df6vsa41"]
+
+[ext_resource type="Script" uid="uid://hut31f28xn1k" path="res://Scripts/Crossbow.gd" id="1_660hi"]
+[ext_resource type="PackedScene" uid="uid://b676mnwgg03yh" path="res://Scenes/Projectiles/CrossbowBolt.tscn" id="2_ctxr0"]
+
+[node name="Crossbow" type="Node2D" node_paths=PackedStringArray("self_node")]
+position = Vector2(40, 14)
+script = ExtResource("1_660hi")
+bolt = ExtResource("2_ctxr0")
+self_node = NodePath(".")
+projectile_based = true

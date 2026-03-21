@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cync3vjqh7k4u"]
+
+[ext_resource type="Script" uid="uid://bj1d7cxgdny80" path="res://Scripts/FireBolt.gd" id="1_0q6h1"]
+[ext_resource type="Texture2D" uid="uid://b00cx4qvkdaw" path="res://Sprites/Heroes/Fire.png" id="2_0q6h1"]
+[ext_resource type="PackedScene" uid="uid://b834iqk5k7heq" path="res://Scenes/Projectiles/Lava.tscn" id="2_xohbm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d3xpw"]
+radius = 6.9999995
+height = 27.249998
+
+[node name="FireBolt" type="RigidBody2D" node_paths=PackedStringArray("body")]
+collision_layer = 0
+collision_mask = 0
+mass = 0.01
+gravity_scale = 0.0
+max_contacts_reported = 1
+script = ExtResource("1_0q6h1")
+lava = ExtResource("2_xohbm")
+body = NodePath(".")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.78, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_d3xpw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-5.04, 0)
+rotation = -1.5707964
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("2_0q6h1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

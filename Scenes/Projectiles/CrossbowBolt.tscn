@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b676mnwgg03yh"]
+
+[ext_resource type="Script" uid="uid://c6xw86ag5d7ob" path="res://Scripts/CrossbowBolt.gd" id="1_tcile"]
+[ext_resource type="Texture2D" uid="uid://dfyqm7cspyrqs" path="res://Sprites/Heroes/crossbow bolt.png" id="2_8ytnl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d3xpw"]
+radius = 3.4300003
+height = 27.249998
+
+[node name="CrossbowBolt" type="RigidBody2D" node_paths=PackedStringArray("body")]
+collision_layer = 0
+collision_mask = 0
+mass = 0.01
+gravity_scale = 0.0
+script = ExtResource("1_tcile")
+body = NodePath(".")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.78, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_d3xpw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-5.04, 0)
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("2_8ytnl")

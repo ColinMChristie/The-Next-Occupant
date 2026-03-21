@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhf6mo8bkcx2u"]
+
+[ext_resource type="Script" uid="uid://o743ww7nyc8m" path="res://Scripts/FireBook.gd" id="1_gql5i"]
+[ext_resource type="PackedScene" uid="uid://cync3vjqh7k4u" path="res://Scenes/Projectiles/FireBolt.tscn" id="2_fon18"]
+
+[node name="FireBook" type="Node2D" node_paths=PackedStringArray("self_node")]
+position = Vector2(40, -14)
+script = ExtResource("1_gql5i")
+fire = ExtResource("2_fon18")
+self_node = NodePath(".")
+projectile_based = true
