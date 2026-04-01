@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdwtf5dvwgits"]
+
+[ext_resource type="Texture2D" uid="uid://txrri7fvilvp" path="res://Sprites/Pages/Page9Tile.png" id="1_xynse"]
+[ext_resource type="Script" uid="uid://0al0cnxk1nsq" path="res://Scripts/FightPage.gd" id="2_uvvbw"]
+[ext_resource type="FontFile" uid="uid://bdbjg0bbkr4v2" path="res://Add-Ons/Fonts/Jacquard12-Regular.ttf" id="3_hj3yp"]
+[ext_resource type="Texture2D" uid="uid://c35jthxv61dqf" path="res://Sprites/Pages/Coin.png" id="4_yj611"]
+[ext_resource type="Texture2D" uid="uid://tdpt5n5cedhy" path="res://Sprites/Pages/InventorySlots.png" id="5_yj611"]
+[ext_resource type="Texture2D" uid="uid://dsvdn8glya46c" path="res://Sprites/Pages/InventorySelect.png" id="6_r8o3h"]
+[ext_resource type="Texture2D" uid="uid://bvls8dav1ssvd" path="res://Sprites/Pages/InventoryFocus.png" id="7_liuqp"]
+
+[sub_resource type="Theme" id="Theme_0fj1v"]
+
+[node name="Inventory" type="NinePatchRect" node_paths=PackedStringArray("bet_number")]
+texture_filter = 1
+offset_left = 210.0
+offset_top = 155.0
+offset_right = 449.0
+offset_bottom = 479.0
+texture = ExtResource("1_xynse")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+script = ExtResource("2_uvvbw")
+bet_number = NodePath("")
+
+[node name="AddOne" type="Button" parent="."]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 218.0
+offset_right = 179.0
+offset_bottom = 260.0
+theme = SubResource("Theme_0fj1v")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hj3yp")
+theme_override_font_sizes/font_size = 33
+text = "+1"
+icon = ExtResource("4_yj611")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="SubtractOne" type="Button" parent="."]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 218.0
+offset_right = 226.0
+offset_bottom = 260.0
+theme = SubResource("Theme_0fj1v")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.61960787, 0.50980395, 1)
+theme_override_fonts/font = ExtResource("3_hj3yp")
+theme_override_font_sizes/font_size = 33
+text = "-1"
+icon = ExtResource("4_yj611")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Finalize1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 271.0
+offset_right = 101.0
+offset_bottom = 313.0
+theme = SubResource("Theme_0fj1v")
+theme_override_colors/font_color = Color(0.69803923, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hj3yp")
+theme_override_font_sizes/font_size = 27
+text = "Finalize"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Finalize2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 272.0
+offset_right = 226.0
+offset_bottom = 314.0
+theme = SubResource("Theme_0fj1v")
+theme_override_colors/font_color = Color(0, 0, 0.7294118, 1)
+theme_override_fonts/font = ExtResource("3_hj3yp")
+theme_override_font_sizes/font_size = 27
+text = "Finalize"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Slot" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_yj611")
+texture_pressed = ExtResource("6_r8o3h")
+texture_hover = ExtResource("7_liuqp")
+
+[connection signal="button_down" from="AddOne" to="." method="_on_add_one_button_down"]
+[connection signal="button_down" from="SubtractOne" to="." method="_on_subtract_one_button_down"]
+[connection signal="button_down" from="Finalize1" to="." method="_on_finalize_1_button_down"]
+[connection signal="button_down" from="Finalize2" to="." method="_on_finalize_2_button_down"]

@@ -1,7 +1,9 @@
-extends Projectile
-class_name CrossbowBolt
+extends NinePatchRect
+class_name FightPage
 
+var world_spawner : World
 
+var bet : int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +14,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_body_entered(body: Node) -> void:
-	if body is Hero:
-		self.queue_free()
+func spawn_fight(ba : bool) -> void:
+	world_spawner.bet_amount = bet
+	world_spawner.bet_alliance = ba
+	world_spawner.spawn_fight()
+	self.queue_free()

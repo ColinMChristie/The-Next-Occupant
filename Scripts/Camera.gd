@@ -1,7 +1,6 @@
-extends Projectile
-class_name CrossbowBolt
+extends Camera2D
 
-
+var smooth_speed = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,8 +9,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-func _on_body_entered(body: Node) -> void:
-	if body is Hero:
-		self.queue_free()
+	global_position = global_position.lerp(get_global_mouse_position(), smooth_speed * delta)

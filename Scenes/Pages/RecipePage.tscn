@@ -1,0 +1,255 @@
+[gd_scene load_steps=13 format=3 uid="uid://o7ylagewl1xe"]
+
+[ext_resource type="Texture2D" uid="uid://txrri7fvilvp" path="res://Sprites/Pages/Page9Tile.png" id="1_7np2g"]
+[ext_resource type="Script" uid="uid://0al0cnxk1nsq" path="res://Scripts/FightPage.gd" id="2_i3eso"]
+[ext_resource type="Script" uid="uid://p4ff0jsdclyx" path="res://Scripts/RecipeSlots.gd" id="3_52ox0"]
+[ext_resource type="Texture2D" uid="uid://tdpt5n5cedhy" path="res://Sprites/Pages/InventorySlots.png" id="13_4fa4q"]
+[ext_resource type="Texture2D" uid="uid://dsvdn8glya46c" path="res://Sprites/Pages/InventorySelect.png" id="14_lnchv"]
+[ext_resource type="Texture2D" uid="uid://bvls8dav1ssvd" path="res://Sprites/Pages/InventoryFocus.png" id="15_4y2k6"]
+[ext_resource type="Script" uid="uid://chn5afbwtg3j" path="res://Scripts/Slot.gd" id="16_hkr1i"]
+[ext_resource type="Texture2D" uid="uid://lehsmbalk67h" path="res://Sprites/Pages/ArrowIdle.png" id="17_j1h4n"]
+[ext_resource type="FontFile" uid="uid://bdbjg0bbkr4v2" path="res://Add-Ons/Fonts/Jacquard12-Regular.ttf" id="20_wdprq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ayi4"]
+bg_color = Color(0.6, 0.11764706, 0.050980393, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.23137255, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 1
+shadow_offset = Vector2(-2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8capt"]
+bg_color = Color(0.5019608, 0.02745098, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.7137255, 0.16862746, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+shadow_offset = Vector2(-2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52ox0"]
+bg_color = Color(0.7137255, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+shadow_offset = Vector2(-2, 2)
+
+[node name="RecipePage" type="NinePatchRect"]
+texture_filter = 1
+custom_minimum_size = Vector2(239, 324)
+offset_right = 239.0
+offset_bottom = 324.0
+texture = ExtResource("1_7np2g")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+script = ExtResource("2_i3eso")
+
+[node name="RecipeSlots" type="Control" parent="." node_paths=PackedStringArray("slots")]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_52ox0")
+slots = [NodePath("Slot"), NodePath("Slot2"), NodePath("Slot3"), NodePath("Slot4"), NodePath("Slot5")]
+
+[node name="Slot" type="TextureButton" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 18.0
+offset_right = 61.0
+offset_bottom = 50.0
+texture_normal = ExtResource("13_4fa4q")
+texture_pressed = ExtResource("14_lnchv")
+texture_hover = ExtResource("15_4y2k6")
+script = ExtResource("16_hkr1i")
+
+[node name="Slot2" type="TextureButton" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 98.0
+offset_right = 61.0
+offset_bottom = 130.0
+texture_normal = ExtResource("13_4fa4q")
+texture_pressed = ExtResource("14_lnchv")
+texture_hover = ExtResource("15_4y2k6")
+script = ExtResource("16_hkr1i")
+
+[node name="Slot3" type="TextureButton" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 138.0
+offset_right = 61.0
+offset_bottom = 170.0
+texture_normal = ExtResource("13_4fa4q")
+texture_pressed = ExtResource("14_lnchv")
+texture_hover = ExtResource("15_4y2k6")
+script = ExtResource("16_hkr1i")
+
+[node name="Slot4" type="TextureButton" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 178.0
+offset_right = 61.0
+offset_bottom = 210.0
+texture_normal = ExtResource("13_4fa4q")
+texture_pressed = ExtResource("14_lnchv")
+texture_hover = ExtResource("15_4y2k6")
+script = ExtResource("16_hkr1i")
+
+[node name="Slot5" type="TextureButton" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 218.0
+offset_right = 61.0
+offset_bottom = 250.0
+texture_normal = ExtResource("13_4fa4q")
+texture_pressed = ExtResource("14_lnchv")
+texture_hover = ExtResource("15_4y2k6")
+script = ExtResource("16_hkr1i")
+
+[node name="SectionName" type="RichTextLabel" parent="RecipeSlots"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 30.0
+offset_top = 63.0
+offset_right = 210.0
+offset_bottom = 110.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("20_wdprq")
+theme_override_fonts/bold_font = ExtResource("20_wdprq")
+theme_override_fonts/bold_italics_font = ExtResource("20_wdprq")
+theme_override_fonts/italics_font = ExtResource("20_wdprq")
+theme_override_fonts/mono_font = ExtResource("20_wdprq")
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "Crossbow"
+horizontal_alignment = 1
+
+[node name="LeftArrow" type="TextureRect" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 18.0
+offset_right = 105.0
+offset_bottom = 58.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("17_j1h4n")
+flip_h = true
+
+[node name="LeftArrow2" type="TextureRect" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 97.0
+offset_right = 108.0
+offset_bottom = 137.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("17_j1h4n")
+flip_h = true
+
+[node name="LeftArrow3" type="TextureRect" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 138.0
+offset_right = 107.0
+offset_bottom = 178.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("17_j1h4n")
+flip_h = true
+
+[node name="LeftArrow4" type="TextureRect" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 178.0
+offset_right = 107.0
+offset_bottom = 218.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("17_j1h4n")
+flip_h = true
+
+[node name="LeftArrow5" type="TextureRect" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 217.0
+offset_right = 107.0
+offset_bottom = 257.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("17_j1h4n")
+flip_h = true
+
+[node name="ComponentItemContainer" type="VBoxContainer" parent="RecipeSlots"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 104.0
+offset_top = 98.0
+offset_right = 144.0
+offset_bottom = 249.0
+theme_override_constants/separation = 9
+
+[node name="RecipeItemContainer" type="VBoxContainer" parent="RecipeSlots"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 104.0
+offset_top = 19.0
+offset_right = 144.0
+offset_bottom = 170.0
+theme_override_constants/separation = 9
+
+[node name="Build" type="Button" parent="RecipeSlots"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 266.0
+offset_right = 151.0
+offset_bottom = 298.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("20_wdprq")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ayi4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8capt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_52ox0")
+text = "Build"
+
+[connection signal="mouse_entered" from="RecipeSlots/Slot" to="RecipeSlots/Slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RecipeSlots/Slot" to="RecipeSlots/Slot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="RecipeSlots/Slot2" to="RecipeSlots/Slot2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RecipeSlots/Slot2" to="RecipeSlots/Slot2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="RecipeSlots/Slot3" to="RecipeSlots/Slot3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RecipeSlots/Slot3" to="RecipeSlots/Slot3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="RecipeSlots/Slot4" to="RecipeSlots/Slot4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RecipeSlots/Slot4" to="RecipeSlots/Slot4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="RecipeSlots/Slot5" to="RecipeSlots/Slot5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RecipeSlots/Slot5" to="RecipeSlots/Slot5" method="_on_mouse_exited"]
+[connection signal="pressed" from="RecipeSlots/Build" to="RecipeSlots" method="_on_build_pressed"]
