@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccg14osyn8234"]
+[gd_scene load_steps=10 format=3 uid="uid://ccg14osyn8234"]
 
 [ext_resource type="Script" uid="uid://cpd8cr3nep7r7" path="res://Scripts/World.gd" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://b3v5goea8hs27" path="res://Scenes/Heroes/Archer.tscn" id="2_8j60k"]
 [ext_resource type="PackedScene" uid="uid://o7ylagewl1xe" path="res://Scenes/Pages/RecipePage.tscn" id="3_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://c8r5fa6xnkagq" path="res://Scenes/Heroes/Wizard.tscn" id="3_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://kcmrm5f6dpct" path="res://Scenes/Dungeon/SpawnPoint.tscn" id="4_8j60k"]
+[ext_resource type="PackedScene" uid="uid://centulcm2utku" path="res://Scenes/Pages/BlueprintPage.tscn" id="4_k7acu"]
+[ext_resource type="PackedScene" uid="uid://b6c3k7dn3mppa" path="res://Scenes/Pages/InspectorPage.tscn" id="5_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://dbsc4p80ttvm2" path="res://Scenes/Pages/Inventory.tscn" id="6_5ukr8"]
 [ext_resource type="Script" uid="uid://belnhi6855jip" path="res://Scripts/Camera.gd" id="7_o06y3"]
 
@@ -12,6 +14,8 @@
 script = ExtResource("1_a02cp")
 inventory = ExtResource("6_5ukr8")
 recipe_page = ExtResource("3_5ukr8")
+blueprint_page = ExtResource("4_k7acu")
+inspector_page = ExtResource("5_5v1tr")
 hero_prefabs = Array[PackedScene]([ExtResource("2_8j60k"), ExtResource("3_fo5ed")])
 
 [node name="SpawnPointHolder" type="Node2D" parent="."]
@@ -42,6 +46,7 @@ offset_bottom = 324.0
 theme_override_constants/separation = 10
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.58, 1.58)
 limit_left = -10
 limit_top = -10
 limit_right = 1700

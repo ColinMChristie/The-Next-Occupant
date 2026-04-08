@@ -1,0 +1,368 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6c3k7dn3mppa"]
+
+[ext_resource type="Texture2D" uid="uid://txrri7fvilvp" path="res://Sprites/Pages/Page9Tile.png" id="1_cj8m3"]
+[ext_resource type="Script" uid="uid://0al0cnxk1nsq" path="res://Scripts/FightPage.gd" id="2_wqrh7"]
+[ext_resource type="Script" uid="uid://crx17q65lgoj2" path="res://Scripts/InspectorSlots.gd" id="3_h1oof"]
+[ext_resource type="StyleBox" uid="uid://db27n5c2qu1n4" path="res://Styles/BlueprintPage.tres" id="4_8cpis"]
+[ext_resource type="Texture2D" uid="uid://blhwupq831ify" path="res://Sprites/Pages/Behaviors/blind.png" id="4_hrtoh"]
+[ext_resource type="FontFile" uid="uid://bdbjg0bbkr4v2" path="res://Add-Ons/Fonts/Jacquard12-Regular.ttf" id="4_xgpge"]
+
+[node name="InspectorPage" type="NinePatchRect"]
+texture_filter = 1
+custom_minimum_size = Vector2(239, 324)
+offset_right = 239.0
+offset_bottom = 324.0
+texture = ExtResource("1_cj8m3")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+script = ExtResource("2_wqrh7")
+
+[node name="InspectorSlots" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_h1oof")
+behavior_image_list = Array[CompressedTexture2D]([ExtResource("4_hrtoh")])
+
+[node name="ItemPanel" type="Panel" parent="InspectorSlots"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 38.0
+offset_right = 112.0
+offset_bottom = 101.0
+theme_override_styles/panel = ExtResource("4_8cpis")
+
+[node name="ItemName" type="RichTextLabel" parent="InspectorSlots/ItemPanel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 28.0
+offset_right = 89.0
+offset_bottom = 79.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Common Crossbow"
+horizontal_alignment = 1
+
+[node name="ItemContainer" type="Container" parent="InspectorSlots/ItemPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 28.0
+offset_top = 3.0
+offset_right = 60.0
+offset_bottom = 35.0
+
+[node name="BehaviorPanel" type="Panel" parent="InspectorSlots"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 38.0
+offset_right = 217.0
+offset_bottom = 101.0
+theme_override_styles/panel = ExtResource("4_8cpis")
+
+[node name="Weapon" type="Control" parent="InspectorSlots/BehaviorPanel"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WeaponBehaviorName" type="RichTextLabel" parent="InspectorSlots/BehaviorPanel/Weapon"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 38.0
+offset_right = 89.0
+offset_bottom = 61.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Blind"
+horizontal_alignment = 1
+
+[node name="WeaponBehaviorIcon" type="TextureRect" parent="InspectorSlots/BehaviorPanel/Weapon"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 29.0
+offset_top = 3.0
+offset_right = 61.0
+offset_bottom = 35.0
+
+[node name="Material" type="Control" parent="InspectorSlots/BehaviorPanel"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MaterialItemDescription" type="RichTextLabel" parent="InspectorSlots/BehaviorPanel/Material"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -2.0
+offset_top = 13.0
+offset_right = 87.0
+offset_bottom = 54.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Common Material"
+horizontal_alignment = 1
+
+[node name="Recipe" type="Control" parent="InspectorSlots/BehaviorPanel"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RecipeBehaviorName" type="RichTextLabel" parent="InspectorSlots/BehaviorPanel/Recipe"]
+layout_mode = 0
+offset_top = 23.0
+offset_right = 89.0
+offset_bottom = 46.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Recipe"
+horizontal_alignment = 1
+
+[node name="DescriptionPanel" type="Panel" parent="InspectorSlots"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 108.0
+offset_right = 217.0
+offset_bottom = 308.0
+theme_override_styles/panel = ExtResource("4_8cpis")
+
+[node name="WeaponDesc" type="Control" parent="InspectorSlots/DescriptionPanel"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WeaponDurability" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/WeaponDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 9.0
+offset_right = 119.0
+offset_bottom = 32.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Durability: 100/100"
+
+[node name="WeaponStrength" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/WeaponDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 27.0
+offset_right = 119.0
+offset_bottom = 50.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Strength: 0"
+
+[node name="WeaponDexterity" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/WeaponDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 46.0
+offset_right = 119.0
+offset_bottom = 69.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Dexterity: 0"
+
+[node name="WeaponConstitution" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/WeaponDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 66.0
+offset_right = 119.0
+offset_bottom = 89.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Constitution: 0"
+
+[node name="WeaponAgility" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/WeaponDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 86.0
+offset_right = 119.0
+offset_bottom = 109.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Agility: 0"
+
+[node name="WeaponIntelligence" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/WeaponDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 108.0
+offset_right = 119.0
+offset_bottom = 131.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Intelligence: 0"
+
+[node name="WeaponWill" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/WeaponDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 128.0
+offset_right = 119.0
+offset_bottom = 151.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Will: 0"
+
+[node name="WeaponResistances" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/WeaponDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 107.0
+offset_top = 10.0
+offset_right = 192.0
+offset_bottom = 194.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Resistances:
+Fire: -15%
+Ice: 15%"
+
+[node name="MaterialDesc" type="Control" parent="InspectorSlots/DescriptionPanel"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MaterialDescDescription" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/MaterialDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 5.0
+offset_right = 193.0
+offset_bottom = 196.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "A plank that is reinforced."
+
+[node name="RecipeDesc" type="Control" parent="InspectorSlots/DescriptionPanel"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RecipeDescName1" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/RecipeDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 34.0
+offset_top = 15.0
+offset_right = 192.0
+offset_bottom = 38.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Blind: 25% Chance"
+
+[node name="RecipeDescName2" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/RecipeDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 36.0
+offset_top = 53.0
+offset_right = 194.0
+offset_bottom = 76.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Blind: 25% Chance"
+
+[node name="RecipeDescName3" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/RecipeDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 37.0
+offset_top = 95.0
+offset_right = 195.0
+offset_bottom = 118.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Blind: 25% Chance"
+
+[node name="RecipeDescName4" type="RichTextLabel" parent="InspectorSlots/DescriptionPanel/RecipeDesc"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 38.0
+offset_top = 140.0
+offset_right = 196.0
+offset_bottom = 163.0
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Blind: 25% Chance"
+
+[node name="RecipeIcon1" type="TextureRect" parent="InspectorSlots/DescriptionPanel/RecipeDesc"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 35.0
+offset_bottom = 39.0
+texture = ExtResource("4_hrtoh")
+
+[node name="RecipeIcon2" type="TextureRect" parent="InspectorSlots/DescriptionPanel/RecipeDesc"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 45.0
+offset_right = 35.0
+offset_bottom = 77.0
+texture = ExtResource("4_hrtoh")
+
+[node name="RecipeIcon3" type="TextureRect" parent="InspectorSlots/DescriptionPanel/RecipeDesc"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 87.0
+offset_right = 36.0
+offset_bottom = 119.0
+texture = ExtResource("4_hrtoh")
+
+[node name="RecipeIcon4" type="TextureRect" parent="InspectorSlots/DescriptionPanel/RecipeDesc"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 131.0
+offset_right = 36.0
+offset_bottom = 163.0
+texture = ExtResource("4_hrtoh")
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 11.0
+offset_right = 230.0
+offset_bottom = 37.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_xgpge")
+theme_override_fonts/bold_font = ExtResource("4_xgpge")
+theme_override_fonts/bold_italics_font = ExtResource("4_xgpge")
+theme_override_fonts/italics_font = ExtResource("4_xgpge")
+theme_override_fonts/mono_font = ExtResource("4_xgpge")
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "Inspector"
+horizontal_alignment = 1

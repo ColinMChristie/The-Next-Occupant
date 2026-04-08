@@ -1,7 +1,7 @@
-extends NinePatchRect
-class_name FightPage
+extends Button
+class_name BlueprintButton
 
-var world_spawner : World
+@export var recipe_id : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,3 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_pressed() -> void:
+	%BlueprintSlots.change_recipe(recipe_id)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dbsc4p80ttvm2"]
+[gd_scene load_steps=25 format=3 uid="uid://dbsc4p80ttvm2"]
 
 [ext_resource type="Texture2D" uid="uid://txrri7fvilvp" path="res://Sprites/Pages/Page9Tile.png" id="1_qopc5"]
 [ext_resource type="Script" uid="uid://0al0cnxk1nsq" path="res://Scripts/FightPage.gd" id="2_o3upi"]
@@ -20,6 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://datttrxjgkps8" path="res://Sprites/Pages/ArrowFocus.png" id="11_l12tw"]
 [ext_resource type="FontFile" uid="uid://bdbjg0bbkr4v2" path="res://Add-Ons/Fonts/Jacquard12-Regular.ttf" id="12_x2r6j"]
 [ext_resource type="PackedScene" uid="uid://cek6d0kbenskm" path="res://Scenes/Items/ArrowItem.tscn" id="12_xcpg4"]
+[ext_resource type="PackedScene" uid="uid://cp77176f6solt" path="res://Scenes/Items/MagicGooItem.tscn" id="13_r80v1"]
+[ext_resource type="PackedScene" uid="uid://wou2bo3axf8" path="res://Scenes/Items/Leather.tscn" id="14_xjta7"]
+[ext_resource type="PackedScene" uid="uid://c3yvamrw3urdb" path="res://Scenes/Items/GoldItem.tscn" id="15_xjta7"]
+[ext_resource type="PackedScene" uid="uid://cqqrupjejl3ky" path="res://Scenes/Items/UncommonCrossbowItem.tscn" id="16_o7hc0"]
 
 [node name="Inventory" type="NinePatchRect"]
 texture_filter = 1
@@ -43,7 +47,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("3_tes3e")
 slots = [NodePath("Slot"), NodePath("Slot2"), NodePath("Slot3"), NodePath("Slot4"), NodePath("Slot5"), NodePath("Slot6"), NodePath("Slot7"), NodePath("Slot8"), NodePath("Slot9"), NodePath("Slot10"), NodePath("Slot11"), NodePath("Slot12"), NodePath("Slot13"), NodePath("Slot14"), NodePath("Slot15"), NodePath("Slot16"), NodePath("Slot17"), NodePath("Slot18"), NodePath("Slot19"), NodePath("Slot20"), NodePath("Slot21"), NodePath("Slot22"), NodePath("Slot23"), NodePath("Slot24"), NodePath("Slot25"), NodePath("Slot26"), NodePath("Slot27"), NodePath("Slot28"), NodePath("Slot29"), NodePath("Slot30"), NodePath("Slot31"), NodePath("Slot32"), NodePath("Slot33"), NodePath("Slot34"), NodePath("Slot35")]
-item_prefab_list = Array[PackedScene]([ExtResource("4_o3upi"), ExtResource("5_rtapu"), ExtResource("6_3145p"), ExtResource("7_b8xmh"), ExtResource("8_g3v4j"), ExtResource("9_mwluo"), ExtResource("10_dc7ck"), ExtResource("11_i5gn4"), ExtResource("12_xcpg4")])
+item_prefab_list = Array[PackedScene]([ExtResource("4_o3upi"), ExtResource("5_rtapu"), ExtResource("6_3145p"), ExtResource("7_b8xmh"), ExtResource("8_g3v4j"), ExtResource("9_mwluo"), ExtResource("10_dc7ck"), ExtResource("11_i5gn4"), ExtResource("12_xcpg4"), ExtResource("13_r80v1"), ExtResource("14_xjta7"), ExtResource("15_xjta7"), ExtResource("16_o7hc0")])
 
 [node name="Slot" type="TextureButton" parent="InvSlots"]
 layout_mode = 0

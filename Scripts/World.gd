@@ -3,6 +3,8 @@ class_name World
 
 @export var inventory : PackedScene
 @export var recipe_page : PackedScene
+@export var blueprint_page : PackedScene
+@export var inspector_page : PackedScene
 
 @export var hero_prefabs : Array[PackedScene]
 var hero_list : Array[Hero]
@@ -10,6 +12,8 @@ var hero_spawn_list : Array[SpawnPoint]
 
 var active_inventory : InvSlots
 var active_recipe : RecipeSlots
+var active_blueprint : BlueprintSlots
+var active_inspector : InspectorSlots
 
 var current_gold : int = 10
 var bet_amount : int
@@ -23,6 +27,9 @@ func _ready() -> void:
 	get_spawn_points()
 	add_inventory()
 	add_recipe_page()
+	add_blueprint_page()
+	add_inspector_page()
+	everything_spawned.emit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -42,6 +49,16 @@ func add_inventory() -> void:
 
 func add_recipe_page() -> void:
 	var temp_page : FightPage = recipe_page.instantiate()
+	temp_page.world_spawner = self
+	%Pages.add_child(temp_page)
+
+func add_blueprint_page() -> void:
+	var temp_page : FightPage = blueprint_page.instantiate()
+	temp_page.world_spawner = self
+	%Pages.add_child(temp_page)
+
+func add_inspector_page() -> void:
+	var temp_page : FightPage = inspector_page.instantiate()
 	temp_page.world_spawner = self
 	%Pages.add_child(temp_page)
 
