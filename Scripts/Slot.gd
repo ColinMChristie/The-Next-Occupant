@@ -7,6 +7,7 @@ var weapon_slot : bool = false
 var recipe_slot : bool = false
 var slot_id : int = 0
 var stack_consume_size : int = 0
+@export var is_occupant_slot : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,6 +16,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if disabled: return
 	if mouse_hovering:
 		if Input.is_action_just_pressed("left_click"):
 			if item_held != null:

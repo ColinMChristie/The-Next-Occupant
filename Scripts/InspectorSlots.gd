@@ -11,7 +11,7 @@ func _ready() -> void:
 	#Gets the item prefab list from another world spawner pointer
 	item_prefab_list = get_parent().world_spawner.active_inventory.item_prefab_list
 	#Sets the inpector starting state by calling the function manually
-	change_inspector(1, false, "Blind", 100, [2,1,3,1,1,2], [-15, 15], "", "", [], [])
+	change_inspector(1, false, "Blind", 100, [2,1,3,0,0,0], [-15, 15], "", "", [], [])
 
 #Spawns a useless item in the inspector container
 func spawn_item(item_num : int, stack_size : int) -> bool:
@@ -22,6 +22,8 @@ func spawn_item(item_num : int, stack_size : int) -> bool:
 	temp_item.z_index = 1
 	temp_item.current_stack_size = stack_size
 	%ItemContainer.add_child(temp_item)
+	if item_num > 1000:
+		temp_item.global_position += Vector2(-16, -16)
 	return temp_item.is_weapon
 
 #Called elsewhere to change the inspector based on something being clicked.
@@ -55,6 +57,10 @@ func change_inspector(item_num : int, is_recipe : bool, weapon_behavior : String
 			%ItemName.text = "Gold Ingot"
 		13:
 			%ItemName.text = "Uncommon Crossbow"
+		1001:
+			%ItemName.text = "\nArcher"
+		1002:
+			%ItemName.text = "\nFire Wizard"
 		#-=+=- WORK AREA END -=+=-
 	#Define behavior of the inspector based on what is clicked on
 	if is_recipe and is_weapon:

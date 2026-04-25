@@ -3,7 +3,7 @@ class_name InvSlots
 
 @export var slots : Array[Slot]
 @export var item_prefab_list : Array[PackedScene]
-var item_list_str : Array[String] = ["1,1,100,Blind,2.1.3.1.1.2,-15.15|2,1,100,Blind,1.1.1.2.3.2,15.-15|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0", "3,10|4,10|5,10|6,10|7,10|3,10|4,10|5,10|6,10|7,10|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0"]
+var item_list_str : Array[String] = ["1,1,100,Blind,2.1.3.0.0.0,-15.15|2,1,100,Blind,0.0.0.1.3.2,15.-15|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0", "3,10|4,10|5,10|6,10|7,10|3,10|4,10|5,10|6,10|7,10|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0"]
 var current_page : int = 0
 
 # Called when the node enters the scene tree for the first time.

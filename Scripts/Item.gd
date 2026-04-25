@@ -13,6 +13,8 @@ var inv_slots : InvSlots
 @export var is_weapon : bool
 #Max stack size
 @export var max_stack_size : int
+#declares an occupant if true
+@export var is_occupant : bool = false
 #What stack size is displayed
 var current_stack_size : int
 #If this is true, it loses all functionality and is only for display in the recipe tab
@@ -130,6 +132,31 @@ func _process(delta: float) -> void:
 								parent_slot.item_held = null
 								temp_recipe_slot.item_held.current_stack_size += current_stack_size
 								queue_free()
+			var temp_occ_slot : Slot = inv_slots.get_parent().world_spawner.active_occupant.get_slot_hovering()
+			if temp_occ_slot != null and temp_occ_slot.weapon_slot == is_weapon:
+				if temp_occ_slot.item_held == null:
+					parent_slot.item_held = null
+					parent_slot = temp_occ_slot
+					parent_slot.item_held = self
+				else:
+					if temp_occ_slot.item_held.item_id == item_id and temp_occ_slot != parent_slot:
+						if temp_occ_slot.item_held.max_stack_size >= current_stack_size + temp_occ_slot.item_held.current_stack_size:
+							parent_slot.item_held = null
+							temp_occ_slot.item_held.current_stack_size += current_stack_size
+							queue_free()
+			if is_occupant:
+				var temp_occupant_slot : Slot = inv_slots.get_parent().world_spawner.active_occupant.occupant_slot
+				if temp_occupant_slot != null:
+					if temp_occupant_slot.item_held == null:
+						parent_slot.item_held = null
+						parent_slot = temp_occupant_slot
+						parent_slot.item_held = self
+				var temp_occupant_slot2 : Slot = inv_slots.get_parent().world_spawner.active_arena.get_slot_hovering()
+				if temp_occupant_slot2 != null:
+					if temp_occupant_slot2.item_held == null:
+						parent_slot.item_held = null
+						parent_slot = temp_occupant_slot2
+						parent_slot.item_held = self
 			on_mouse = false
 	else:
 		global_position = parent_slot.global_position

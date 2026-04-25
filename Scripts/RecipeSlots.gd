@@ -243,7 +243,7 @@ func build_recipe() -> void:
 				match temp_item.weapon_behavior:
 					"Blind":
 						#increases the stat pool by 20
-						total_stat_pool = 10 * (stat_multiplier + 2)
+						total_stat_pool = 2 * (stat_multiplier + 2)
 				for j in range(total_stat_pool):
 					var stat_chances = randi() % 6
 					temp_item.weapon_stats[stat_chances] += 1

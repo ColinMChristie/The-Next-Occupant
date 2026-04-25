@@ -1,0 +1,297 @@
+[gd_scene load_steps=21 format=3 uid="uid://b8ky48ffji0n1"]
+
+[ext_resource type="Texture2D" uid="uid://txrri7fvilvp" path="res://Sprites/Pages/Page9Tile.png" id="1_3kk7t"]
+[ext_resource type="Script" uid="uid://0al0cnxk1nsq" path="res://Scripts/FightPage.gd" id="2_vuocu"]
+[ext_resource type="Script" uid="uid://b4ovbwyk4di7e" path="res://Scripts/ArenaSlots.gd" id="3_wo0fv"]
+[ext_resource type="PackedScene" uid="uid://b3v5goea8hs27" path="res://Scenes/Heroes/Archer.tscn" id="4_d81yy"]
+[ext_resource type="FontFile" uid="uid://bdbjg0bbkr4v2" path="res://Add-Ons/Fonts/Jacquard12-Regular.ttf" id="4_eq711"]
+[ext_resource type="Texture2D" uid="uid://tdpt5n5cedhy" path="res://Sprites/Pages/InventorySlots.png" id="4_ygciy"]
+[ext_resource type="PackedScene" uid="uid://c8r5fa6xnkagq" path="res://Scenes/Heroes/Wizard.tscn" id="5_3kk7t"]
+[ext_resource type="Texture2D" uid="uid://c1em60smbc5r8" path="res://Sprites/Pages/Arena/Fencing.png" id="5_c8lh8"]
+[ext_resource type="Texture2D" uid="uid://dsvdn8glya46c" path="res://Sprites/Pages/InventorySelect.png" id="5_d8yj5"]
+[ext_resource type="Texture2D" uid="uid://bvls8dav1ssvd" path="res://Sprites/Pages/InventoryFocus.png" id="6_77156"]
+[ext_resource type="Script" uid="uid://chn5afbwtg3j" path="res://Scripts/Slot.gd" id="7_umxkf"]
+[ext_resource type="Texture2D" uid="uid://bpqkkg12yrdcn" path="res://Sprites/Pages/OccupantSlots.png" id="8_umxkf"]
+[ext_resource type="Texture2D" uid="uid://d1o61uitdlh6u" path="res://Sprites/Pages/OccupantSelect.png" id="9_mkh25"]
+[ext_resource type="Texture2D" uid="uid://bgc88jw10wdnk" path="res://Sprites/Pages/OccupantFocus.png" id="10_d81yy"]
+[ext_resource type="PackedScene" uid="uid://kcmrm5f6dpct" path="res://Scenes/Dungeon/SpawnPoint.tscn" id="10_mkh25"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mry4v"]
+size = Vector2(171, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmjxw"]
+size = Vector2(9, 266)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d81yy"]
+bg_color = Color(0.6, 0.11764706, 0.050980393, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.23137255, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 1
+shadow_offset = Vector2(-2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kk7t"]
+bg_color = Color(0.5019608, 0.02745098, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.7137255, 0.16862746, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+shadow_offset = Vector2(-2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuocu"]
+bg_color = Color(0.7137255, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+shadow_offset = Vector2(-2, 2)
+
+[node name="ArenaPage" type="NinePatchRect"]
+texture_filter = 1
+custom_minimum_size = Vector2(239, 324)
+offset_right = 239.0
+offset_bottom = 324.0
+texture = ExtResource("1_3kk7t")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+script = ExtResource("2_vuocu")
+
+[node name="ArenaSlots" type="Control" parent="." node_paths=PackedStringArray("occupant_slots")]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_wo0fv")
+occupant_slots = [NodePath("OccupantSlot"), NodePath("OccupantSlot2")]
+hero_prefabs = Array[PackedScene]([ExtResource("4_d81yy"), ExtResource("5_3kk7t")])
+
+[node name="Slot" type="TextureButton" parent="ArenaSlots"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 15.0
+offset_right = 225.0
+offset_bottom = 47.0
+texture_normal = ExtResource("4_ygciy")
+texture_pressed = ExtResource("5_d8yj5")
+texture_hover = ExtResource("6_77156")
+script = ExtResource("7_umxkf")
+
+[node name="Slot2" type="TextureButton" parent="ArenaSlots"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 53.0
+offset_right = 225.0
+offset_bottom = 85.0
+texture_normal = ExtResource("4_ygciy")
+texture_pressed = ExtResource("5_d8yj5")
+texture_hover = ExtResource("6_77156")
+script = ExtResource("7_umxkf")
+
+[node name="Slot3" type="TextureButton" parent="ArenaSlots"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 92.0
+offset_right = 225.0
+offset_bottom = 124.0
+texture_normal = ExtResource("4_ygciy")
+texture_pressed = ExtResource("5_d8yj5")
+texture_hover = ExtResource("6_77156")
+script = ExtResource("7_umxkf")
+
+[node name="Slot4" type="TextureButton" parent="ArenaSlots"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 173.0
+offset_right = 225.0
+offset_bottom = 205.0
+texture_normal = ExtResource("4_ygciy")
+texture_pressed = ExtResource("5_d8yj5")
+texture_hover = ExtResource("6_77156")
+script = ExtResource("7_umxkf")
+
+[node name="Slot5" type="TextureButton" parent="ArenaSlots"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 211.0
+offset_right = 225.0
+offset_bottom = 243.0
+texture_normal = ExtResource("4_ygciy")
+texture_pressed = ExtResource("5_d8yj5")
+texture_hover = ExtResource("6_77156")
+script = ExtResource("7_umxkf")
+
+[node name="Slot6" type="TextureButton" parent="ArenaSlots"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 249.0
+offset_right = 225.0
+offset_bottom = 281.0
+texture_normal = ExtResource("4_ygciy")
+texture_pressed = ExtResource("5_d8yj5")
+texture_hover = ExtResource("6_77156")
+script = ExtResource("7_umxkf")
+
+[node name="Slot7" type="TextureButton" parent="ArenaSlots"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 281.0
+offset_right = 142.0
+offset_bottom = 313.0
+texture_normal = ExtResource("4_ygciy")
+texture_pressed = ExtResource("5_d8yj5")
+texture_hover = ExtResource("6_77156")
+script = ExtResource("7_umxkf")
+
+[node name="OccupantSlot" type="TextureButton" parent="ArenaSlots"]
+layout_mode = 0
+offset_left = 69.47
+offset_top = 42.44
+offset_right = 133.46997
+offset_bottom = 106.43994
+texture_normal = ExtResource("8_umxkf")
+texture_pressed = ExtResource("9_mkh25")
+texture_hover = ExtResource("10_d81yy")
+stretch_mode = 0
+script = ExtResource("7_umxkf")
+is_occupant_slot = true
+
+[node name="OccupantSlot2" type="TextureButton" parent="ArenaSlots"]
+layout_mode = 0
+offset_left = 69.47
+offset_top = 165.37
+offset_right = 133.4699
+offset_bottom = 229.36998
+texture_normal = ExtResource("8_umxkf")
+texture_pressed = ExtResource("9_mkh25")
+texture_hover = ExtResource("10_d81yy")
+stretch_mode = 0
+script = ExtResource("7_umxkf")
+is_occupant_slot = true
+
+[node name="BetMinimum" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 16.0
+offset_top = 287.0
+offset_right = 114.0
+offset_bottom = 334.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_eq711")
+theme_override_fonts/bold_font = ExtResource("4_eq711")
+theme_override_fonts/bold_italics_font = ExtResource("4_eq711")
+theme_override_fonts/italics_font = ExtResource("4_eq711")
+theme_override_fonts/mono_font = ExtResource("4_eq711")
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "Min Bet: 1"
+
+[node name="ArenaFencing" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 189.0
+offset_bottom = 278.0
+texture = ExtResource("5_c8lh8")
+region_rect = Rect2(8.044586, 7.8681145, 79.9126, 80.26309)
+patch_margin_left = 17
+patch_margin_top = 18
+patch_margin_right = 17
+patch_margin_bottom = 17
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="FencingBody" type="StaticBody2D" parent="ArenaFencing"]
+
+[node name="TopBoundary" type="CollisionShape2D" parent="ArenaFencing/FencingBody"]
+position = Vector2(88, 9)
+shape = SubResource("RectangleShape2D_mry4v")
+
+[node name="BottomBoundary" type="CollisionShape2D" parent="ArenaFencing/FencingBody"]
+position = Vector2(89.5, 259)
+shape = SubResource("RectangleShape2D_mry4v")
+
+[node name="LeftBoundary" type="CollisionShape2D" parent="ArenaFencing/FencingBody"]
+position = Vector2(7.5, 132)
+shape = SubResource("RectangleShape2D_rmjxw")
+
+[node name="RightBoundary" type="CollisionShape2D" parent="ArenaFencing/FencingBody"]
+position = Vector2(168, 134)
+shape = SubResource("RectangleShape2D_rmjxw")
+
+[node name="SpawnPointHolder" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="SpawnPoint" parent="SpawnPointHolder" instance=ExtResource("10_mkh25")]
+position = Vector2(101, 74)
+
+[node name="SpawnPoint2" parent="SpawnPointHolder" instance=ExtResource("10_mkh25")]
+position = Vector2(100, 197)
+
+[node name="Bet" type="Button" parent="."]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 130.0
+offset_right = 230.0
+offset_bottom = 162.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("4_eq711")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_d81yy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3kk7t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vuocu")
+text = "Bet"
+
+[connection signal="mouse_entered" from="ArenaSlots/Slot" to="ArenaSlots/Slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArenaSlots/Slot" to="ArenaSlots/Slot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ArenaSlots/Slot2" to="ArenaSlots/Slot2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArenaSlots/Slot2" to="ArenaSlots/Slot2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ArenaSlots/Slot3" to="ArenaSlots/Slot3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArenaSlots/Slot3" to="ArenaSlots/Slot3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ArenaSlots/Slot4" to="ArenaSlots/Slot4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArenaSlots/Slot4" to="ArenaSlots/Slot4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ArenaSlots/Slot5" to="ArenaSlots/Slot5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArenaSlots/Slot5" to="ArenaSlots/Slot5" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ArenaSlots/Slot6" to="ArenaSlots/Slot6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArenaSlots/Slot6" to="ArenaSlots/Slot6" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ArenaSlots/Slot7" to="ArenaSlots/Slot7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArenaSlots/Slot7" to="ArenaSlots/Slot7" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ArenaSlots/OccupantSlot" to="ArenaSlots/OccupantSlot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArenaSlots/OccupantSlot" to="ArenaSlots/OccupantSlot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ArenaSlots/OccupantSlot2" to="ArenaSlots/OccupantSlot2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArenaSlots/OccupantSlot2" to="ArenaSlots/OccupantSlot2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Bet" to="ArenaSlots" method="_on_bet_pressed"]

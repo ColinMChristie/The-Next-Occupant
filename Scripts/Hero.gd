@@ -4,6 +4,9 @@ class_name Hero
 @export var body : RigidBody2D
 var weapon : Weapon
 var ranged : bool
+var stats : Array[int] = [0,0,0,0,0,0]
+var resistances : Array[int] = [0,0]
+var behavior : String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,7 +17,7 @@ func _physics_process(delta: float) -> void:
 	detect_enemies()
 
 func detect_enemies() -> void:
-	var temp_enemies : Array[Hero] = world_spawner.hero_list
+	var temp_enemies : Array[Hero] = world_spawner.active_arena.hero_list
 	var closest_dist : int = lock_range
 	var current_locked : Hero = null
 	for enemy in temp_enemies:
