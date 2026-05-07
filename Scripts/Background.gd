@@ -1,6 +1,7 @@
-extends Camera2D
+extends Node
 
-var smooth_speed = 2
+@export var speed_scale : float = 10
+@export var offset : float = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,4 +10,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	global_position = get_global_mouse_position()
+	self.global_position = Vector2(self.global_position.x, %Camera2D.get_screen_center_position().y/speed_scale)
+	self.global_position += Vector2(0, offset)
