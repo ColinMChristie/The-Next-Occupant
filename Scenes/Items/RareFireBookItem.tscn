@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://lfscvudu7s5b"]
+
+[ext_resource type="Texture2D" uid="uid://d2ahqbiwrqdfa" path="res://Sprites/Pages/Items/Rare_FireBook.png" id="1_ex28t"]
+[ext_resource type="Script" uid="uid://bxc2kuvys03tl" path="res://Scripts/Item.gd" id="2_c2j3m"]
+[ext_resource type="FontFile" uid="uid://bdbjg0bbkr4v2" path="res://Add-Ons/Fonts/Jacquard12-Regular.ttf" id="3_5w6ac"]
+
+[node name="RareFireBookItem" type="TextureRect" unique_id=248812502]
+texture_filter = 1
+offset_right = 32.0
+offset_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource("1_ex28t")
+script = ExtResource("2_c2j3m")
+item_id = 21
+is_weapon = true
+max_stack_size = 1
+
+[node name="StackSize" type="RichTextLabel" parent="." unique_id=1042942254]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 6.0
+offset_right = 63.0
+offset_bottom = 46.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_5w6ac")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "1"

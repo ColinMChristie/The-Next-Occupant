@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqqrupjejl3ky"]
+[gd_scene format=3 uid="uid://cqqrupjejl3ky"]
 
-[ext_resource type="Texture2D" uid="uid://v0f0g063ug5o" path="res://Sprites/Pages/Items/CrossbowItem.png" id="1_17rp6"]
+[ext_resource type="Texture2D" uid="uid://behapqkhewyhh" path="res://Sprites/Pages/Items/Uncommon_Crossbow.png" id="1_17rp6"]
 [ext_resource type="Script" uid="uid://bxc2kuvys03tl" path="res://Scripts/Item.gd" id="2_v6x2d"]
 [ext_resource type="FontFile" uid="uid://bdbjg0bbkr4v2" path="res://Add-Ons/Fonts/Jacquard12-Regular.ttf" id="3_6078x"]
 
-[node name="UncommonCrossbowItem" type="TextureRect"]
+[node name="UncommonCrossbowItem" type="TextureRect" unique_id=552779435]
 texture_filter = 1
 offset_right = 32.0
 offset_bottom = 32.0
@@ -15,7 +15,7 @@ item_id = 13
 is_weapon = true
 max_stack_size = 1
 
-[node name="StackSize" type="RichTextLabel" parent="."]
+[node name="StackSize" type="RichTextLabel" parent="." unique_id=914028376]
 unique_name_in_owner = true
 visible = false
 layout_mode = 0

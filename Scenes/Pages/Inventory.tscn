@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dbsc4p80ttvm2"]
+[gd_scene format=3 uid="uid://dbsc4p80ttvm2"]
 
 [ext_resource type="Texture2D" uid="uid://txrri7fvilvp" path="res://Sprites/Pages/Page9Tile.png" id="1_qopc5"]
 [ext_resource type="Script" uid="uid://0al0cnxk1nsq" path="res://Scripts/FightPage.gd" id="2_o3upi"]
@@ -21,13 +21,26 @@
 [ext_resource type="FontFile" uid="uid://bdbjg0bbkr4v2" path="res://Add-Ons/Fonts/Jacquard12-Regular.ttf" id="12_x2r6j"]
 [ext_resource type="PackedScene" uid="uid://cek6d0kbenskm" path="res://Scenes/Items/ArrowItem.tscn" id="12_xcpg4"]
 [ext_resource type="PackedScene" uid="uid://cp77176f6solt" path="res://Scenes/Items/MagicGooItem.tscn" id="13_r80v1"]
-[ext_resource type="PackedScene" uid="uid://wou2bo3axf8" path="res://Scenes/Items/Leather.tscn" id="14_xjta7"]
+[ext_resource type="PackedScene" uid="uid://wou2bo3axf8" path="res://Scenes/Items/LeatherItem.tscn" id="14_xjta7"]
 [ext_resource type="PackedScene" uid="uid://c3yvamrw3urdb" path="res://Scenes/Items/GoldItem.tscn" id="15_xjta7"]
 [ext_resource type="PackedScene" uid="uid://cqqrupjejl3ky" path="res://Scenes/Items/UncommonCrossbowItem.tscn" id="16_o7hc0"]
 [ext_resource type="PackedScene" uid="uid://ntfdqsbsch8s" path="res://Scenes/Items/HeroItems/ArcherItem.tscn" id="17_u3ihi"]
+[ext_resource type="PackedScene" uid="uid://b0mx47oxjo0nw" path="res://Scenes/Items/FireEssenceItem.tscn" id="17_xsw7y"]
+[ext_resource type="PackedScene" uid="uid://cbbqo2dd8qqa4" path="res://Scenes/Items/UncommonFireBookItem.tscn" id="18_5642q"]
 [ext_resource type="PackedScene" uid="uid://b62f8so86e2qa" path="res://Scenes/Items/HeroItems/FireWizardItem.tscn" id="18_spy0v"]
+[ext_resource type="PackedScene" uid="uid://cxdvhoha2ak4" path="res://Scenes/Items/PlanksItem.tscn" id="19_lesdl"]
+[ext_resource type="PackedScene" uid="uid://cueh4fy16mdso" path="res://Scenes/Items/MetalPlateItem.tscn" id="20_8h7av"]
+[ext_resource type="PackedScene" uid="uid://csg616bxeyvu1" path="res://Scenes/Items/NailItem.tscn" id="21_0hxkh"]
+[ext_resource type="PackedScene" uid="uid://d0ycaiki8wt47" path="res://Scenes/Items/BoneDustItem.tscn" id="22_rfgnu"]
+[ext_resource type="PackedScene" uid="uid://dwbxhjvgd6pdc" path="res://Scenes/Items/LinenItem.tscn" id="23_6ndhp"]
+[ext_resource type="PackedScene" uid="uid://lfscvudu7s5b" path="res://Scenes/Items/RareFireBookItem.tscn" id="24_x1x4v"]
+[ext_resource type="PackedScene" uid="uid://4vj7rmuikw0p" path="res://Scenes/Items/RareCrossbowItem.tscn" id="25_srei7"]
+[ext_resource type="PackedScene" uid="uid://6umdrhnv5s3j" path="res://Scenes/Items/EpicFireBookItem.tscn" id="26_cov5l"]
+[ext_resource type="PackedScene" uid="uid://c42qj75mnbsp7" path="res://Scenes/Items/EpicCrossbowItem.tscn" id="27_gedrg"]
+[ext_resource type="PackedScene" uid="uid://dmk1pi7od2ghq" path="res://Scenes/Items/LegendaryFireBookItem.tscn" id="28_c2ynu"]
+[ext_resource type="PackedScene" uid="uid://c2s7psysnnupd" path="res://Scenes/Items/LegendaryCrossbowItem.tscn" id="29_qh4r7"]
 
-[node name="Inventory" type="NinePatchRect"]
+[node name="Inventory" type="NinePatchRect" unique_id=1130345966]
 texture_filter = 1
 custom_minimum_size = Vector2(239, 324)
 offset_right = 239.0
@@ -42,16 +55,16 @@ axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 script = ExtResource("2_o3upi")
 
-[node name="InvSlots" type="Control" parent="." node_paths=PackedStringArray("slots")]
+[node name="InvSlots" type="Control" parent="." unique_id=1455246257 node_paths=PackedStringArray("slots")]
 unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("3_tes3e")
 slots = [NodePath("Slot"), NodePath("Slot2"), NodePath("Slot3"), NodePath("Slot4"), NodePath("Slot5"), NodePath("Slot6"), NodePath("Slot7"), NodePath("Slot8"), NodePath("Slot9"), NodePath("Slot10"), NodePath("Slot11"), NodePath("Slot12"), NodePath("Slot13"), NodePath("Slot14"), NodePath("Slot15"), NodePath("Slot16"), NodePath("Slot17"), NodePath("Slot18"), NodePath("Slot19"), NodePath("Slot20"), NodePath("Slot21"), NodePath("Slot22"), NodePath("Slot23"), NodePath("Slot24"), NodePath("Slot25"), NodePath("Slot26"), NodePath("Slot27"), NodePath("Slot28"), NodePath("Slot29"), NodePath("Slot30"), NodePath("Slot31"), NodePath("Slot32"), NodePath("Slot33"), NodePath("Slot34"), NodePath("Slot35")]
-item_prefab_list = Array[PackedScene]([ExtResource("4_o3upi"), ExtResource("5_rtapu"), ExtResource("6_3145p"), ExtResource("7_b8xmh"), ExtResource("8_g3v4j"), ExtResource("9_mwluo"), ExtResource("10_dc7ck"), ExtResource("11_i5gn4"), ExtResource("12_xcpg4"), ExtResource("13_r80v1"), ExtResource("14_xjta7"), ExtResource("15_xjta7"), ExtResource("16_o7hc0"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, ExtResource("17_u3ihi"), ExtResource("18_spy0v")])
+item_prefab_list = Array[PackedScene]([ExtResource("4_o3upi"), ExtResource("5_rtapu"), ExtResource("6_3145p"), ExtResource("7_b8xmh"), ExtResource("8_g3v4j"), ExtResource("9_mwluo"), ExtResource("10_dc7ck"), ExtResource("11_i5gn4"), ExtResource("12_xcpg4"), ExtResource("13_r80v1"), ExtResource("14_xjta7"), ExtResource("15_xjta7"), ExtResource("16_o7hc0"), ExtResource("17_xsw7y"), ExtResource("18_5642q"), ExtResource("19_lesdl"), ExtResource("20_8h7av"), ExtResource("21_0hxkh"), ExtResource("22_rfgnu"), ExtResource("23_6ndhp"), ExtResource("24_x1x4v"), ExtResource("26_cov5l"), ExtResource("28_c2ynu"), ExtResource("25_srei7"), ExtResource("27_gedrg"), ExtResource("29_qh4r7"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, ExtResource("17_u3ihi"), ExtResource("18_spy0v")])
 
-[node name="Slot" type="TextureButton" parent="InvSlots"]
+[node name="Slot" type="TextureButton" parent="InvSlots" unique_id=91882051]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 12.0
@@ -62,7 +75,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot2" type="TextureButton" parent="InvSlots"]
+[node name="Slot2" type="TextureButton" parent="InvSlots" unique_id=1670670411]
 layout_mode = 0
 offset_left = 66.0
 offset_top = 12.0
@@ -73,7 +86,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot3" type="TextureButton" parent="InvSlots"]
+[node name="Slot3" type="TextureButton" parent="InvSlots" unique_id=219838911]
 layout_mode = 0
 offset_left = 103.0
 offset_top = 12.0
@@ -84,7 +97,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot4" type="TextureButton" parent="InvSlots"]
+[node name="Slot4" type="TextureButton" parent="InvSlots" unique_id=386700610]
 layout_mode = 0
 offset_left = 140.0
 offset_top = 12.0
@@ -95,7 +108,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot5" type="TextureButton" parent="InvSlots"]
+[node name="Slot5" type="TextureButton" parent="InvSlots" unique_id=1984621024]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 12.0
@@ -106,7 +119,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot6" type="TextureButton" parent="InvSlots"]
+[node name="Slot6" type="TextureButton" parent="InvSlots" unique_id=99440778]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 49.0
@@ -117,7 +130,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot7" type="TextureButton" parent="InvSlots"]
+[node name="Slot7" type="TextureButton" parent="InvSlots" unique_id=940918532]
 layout_mode = 0
 offset_left = 66.0
 offset_top = 49.0
@@ -128,7 +141,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot8" type="TextureButton" parent="InvSlots"]
+[node name="Slot8" type="TextureButton" parent="InvSlots" unique_id=678513866]
 layout_mode = 0
 offset_left = 103.0
 offset_top = 49.0
@@ -139,7 +152,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot9" type="TextureButton" parent="InvSlots"]
+[node name="Slot9" type="TextureButton" parent="InvSlots" unique_id=1649502168]
 layout_mode = 0
 offset_left = 140.0
 offset_top = 49.0
@@ -150,7 +163,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot10" type="TextureButton" parent="InvSlots"]
+[node name="Slot10" type="TextureButton" parent="InvSlots" unique_id=1527206347]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 49.0
@@ -161,7 +174,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot11" type="TextureButton" parent="InvSlots"]
+[node name="Slot11" type="TextureButton" parent="InvSlots" unique_id=1922224185]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 86.0
@@ -172,7 +185,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot12" type="TextureButton" parent="InvSlots"]
+[node name="Slot12" type="TextureButton" parent="InvSlots" unique_id=291824978]
 layout_mode = 0
 offset_left = 66.0
 offset_top = 86.0
@@ -183,7 +196,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot13" type="TextureButton" parent="InvSlots"]
+[node name="Slot13" type="TextureButton" parent="InvSlots" unique_id=824918295]
 layout_mode = 0
 offset_left = 103.0
 offset_top = 86.0
@@ -194,7 +207,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot14" type="TextureButton" parent="InvSlots"]
+[node name="Slot14" type="TextureButton" parent="InvSlots" unique_id=1329499379]
 layout_mode = 0
 offset_left = 140.0
 offset_top = 86.0
@@ -205,7 +218,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot15" type="TextureButton" parent="InvSlots"]
+[node name="Slot15" type="TextureButton" parent="InvSlots" unique_id=1777014977]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 86.0
@@ -216,7 +229,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot16" type="TextureButton" parent="InvSlots"]
+[node name="Slot16" type="TextureButton" parent="InvSlots" unique_id=1727759051]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 123.0
@@ -227,7 +240,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot17" type="TextureButton" parent="InvSlots"]
+[node name="Slot17" type="TextureButton" parent="InvSlots" unique_id=965636794]
 layout_mode = 0
 offset_left = 66.0
 offset_top = 123.0
@@ -238,7 +251,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot18" type="TextureButton" parent="InvSlots"]
+[node name="Slot18" type="TextureButton" parent="InvSlots" unique_id=418187742]
 layout_mode = 0
 offset_left = 103.0
 offset_top = 123.0
@@ -249,7 +262,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot19" type="TextureButton" parent="InvSlots"]
+[node name="Slot19" type="TextureButton" parent="InvSlots" unique_id=1999317741]
 layout_mode = 0
 offset_left = 140.0
 offset_top = 123.0
@@ -260,7 +273,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot20" type="TextureButton" parent="InvSlots"]
+[node name="Slot20" type="TextureButton" parent="InvSlots" unique_id=847215608]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 123.0
@@ -271,7 +284,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot21" type="TextureButton" parent="InvSlots"]
+[node name="Slot21" type="TextureButton" parent="InvSlots" unique_id=921164934]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 160.0
@@ -282,7 +295,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot22" type="TextureButton" parent="InvSlots"]
+[node name="Slot22" type="TextureButton" parent="InvSlots" unique_id=214468438]
 layout_mode = 0
 offset_left = 66.0
 offset_top = 160.0
@@ -293,7 +306,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot23" type="TextureButton" parent="InvSlots"]
+[node name="Slot23" type="TextureButton" parent="InvSlots" unique_id=179564830]
 layout_mode = 0
 offset_left = 103.0
 offset_top = 160.0
@@ -304,7 +317,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot24" type="TextureButton" parent="InvSlots"]
+[node name="Slot24" type="TextureButton" parent="InvSlots" unique_id=1858809981]
 layout_mode = 0
 offset_left = 140.0
 offset_top = 160.0
@@ -315,7 +328,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot25" type="TextureButton" parent="InvSlots"]
+[node name="Slot25" type="TextureButton" parent="InvSlots" unique_id=25875066]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 160.0
@@ -326,7 +339,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot26" type="TextureButton" parent="InvSlots"]
+[node name="Slot26" type="TextureButton" parent="InvSlots" unique_id=516150491]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 197.0
@@ -337,7 +350,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot27" type="TextureButton" parent="InvSlots"]
+[node name="Slot27" type="TextureButton" parent="InvSlots" unique_id=2122340695]
 layout_mode = 0
 offset_left = 66.0
 offset_top = 197.0
@@ -348,7 +361,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot28" type="TextureButton" parent="InvSlots"]
+[node name="Slot28" type="TextureButton" parent="InvSlots" unique_id=1796903784]
 layout_mode = 0
 offset_left = 103.0
 offset_top = 197.0
@@ -359,7 +372,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot29" type="TextureButton" parent="InvSlots"]
+[node name="Slot29" type="TextureButton" parent="InvSlots" unique_id=1193158802]
 layout_mode = 0
 offset_left = 140.0
 offset_top = 197.0
@@ -370,7 +383,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot30" type="TextureButton" parent="InvSlots"]
+[node name="Slot30" type="TextureButton" parent="InvSlots" unique_id=311295270]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 197.0
@@ -381,7 +394,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot31" type="TextureButton" parent="InvSlots"]
+[node name="Slot31" type="TextureButton" parent="InvSlots" unique_id=2108226622]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 234.0
@@ -392,7 +405,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot32" type="TextureButton" parent="InvSlots"]
+[node name="Slot32" type="TextureButton" parent="InvSlots" unique_id=1654413142]
 layout_mode = 0
 offset_left = 66.0
 offset_top = 234.0
@@ -403,7 +416,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot33" type="TextureButton" parent="InvSlots"]
+[node name="Slot33" type="TextureButton" parent="InvSlots" unique_id=1165841433]
 layout_mode = 0
 offset_left = 103.0
 offset_top = 234.0
@@ -414,7 +427,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot34" type="TextureButton" parent="InvSlots"]
+[node name="Slot34" type="TextureButton" parent="InvSlots" unique_id=276442235]
 layout_mode = 0
 offset_left = 140.0
 offset_top = 234.0
@@ -425,7 +438,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="Slot35" type="TextureButton" parent="InvSlots"]
+[node name="Slot35" type="TextureButton" parent="InvSlots" unique_id=1618494904]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 234.0
@@ -436,7 +449,7 @@ texture_pressed = ExtResource("5_66xmt")
 texture_hover = ExtResource("6_6jac4")
 script = ExtResource("7_6qw7m")
 
-[node name="RightArrow" type="TextureButton" parent="."]
+[node name="RightArrow" type="TextureButton" parent="." unique_id=1772585778]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 275.0
@@ -446,7 +459,7 @@ texture_normal = ExtResource("9_6jac4")
 texture_pressed = ExtResource("10_6qw7m")
 texture_hover = ExtResource("11_l12tw")
 
-[node name="LeftArrow" type="TextureButton" parent="."]
+[node name="LeftArrow" type="TextureButton" parent="." unique_id=1643016246]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 275.0
@@ -457,7 +470,7 @@ texture_pressed = ExtResource("10_6qw7m")
 texture_hover = ExtResource("11_l12tw")
 flip_h = true
 
-[node name="SectionName" type="RichTextLabel" parent="."]
+[node name="SectionName" type="RichTextLabel" parent="." unique_id=209018498]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 74.0

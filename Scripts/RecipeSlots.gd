@@ -82,10 +82,10 @@ func change_recipe(recipe_num) -> void:
 			#How many are being made at once
 			slots[0].stack_consume_size = 1
 			#Rest is what is being consumed
-			slots[1].slot_id = 3
-			slots[1].stack_consume_size = 2
+			slots[1].slot_id = 16
+			slots[1].stack_consume_size = 1
 			slots[2].slot_id = 4
-			slots[2].stack_consume_size = 1
+			slots[2].stack_consume_size = 2
 		3:
 			%SectionName.text = "Arrow"
 			is_weapon_recipe = false
@@ -154,6 +154,255 @@ func change_recipe(recipe_num) -> void:
 			slots[2].stack_consume_size = 1
 			slots[3].slot_id = 10
 			slots[3].stack_consume_size = 2
+		9:
+			#MATERIAL TEMPLATE
+			#Material name
+			%SectionName.text = "Fire Essence"
+			#Not a weapon
+			is_weapon_recipe = false
+			#Whats being made
+			slots[0].slot_id = 14
+			#How many are being made at once
+			slots[0].stack_consume_size = 1
+			#Rest is what is being consumed
+			slots[1].slot_id = 10
+			slots[1].stack_consume_size = 2
+			slots[2].slot_id = 6
+			slots[2].stack_consume_size = 1
+		10:
+			#WEAPON TEMPLATE
+			#Name of item
+			%SectionName.text = "Uncommon Fire Book"
+			#is a weapon
+			is_weapon_recipe = true
+			#Keeps track of the odds of each behavior being attached to the weapon on pressing build. Each set of odds subtracts the one before it from itself.
+			#EX: [30, 40, 70, 100] --- the string associated with the 2nd index, 40, would only have a 10% chance of hitting, due to the number 30 before it.
+			behavior_odds = {25 : "Blind", 50 : "Blind", 75 : "Blind", 100 : "Blind"}
+			#Multiplier associated with the weapon. A common weapon will have 1, uncommon 2, etc. This is before the behavior affects the multiplier.
+			stat_multiplier = 2
+			#Resistances to Fire, Ice. Negative bad, positive good
+			current_resistances = [15, -15]
+			#Item_id of what is being made
+			slots[0].slot_id = 15
+			#if recipe creates multiple, you can increase this number to how many it should create
+			slots[0].stack_consume_size = 1
+			#Rest are the items being consumed
+			slots[1].slot_id = 2
+			slots[1].stack_consume_size = 1
+			slots[2].slot_id = 14
+			slots[2].stack_consume_size = 2
+		11:
+			#MATERIAL TEMPLATE
+			#Material name
+			%SectionName.text = "Planks"
+			#Not a weapon
+			is_weapon_recipe = false
+			#Whats being made
+			slots[0].slot_id = 16
+			#How many are being made at once
+			slots[0].stack_consume_size = 1
+			#Rest is what is being consumed
+			#add plank in othe recipe, once it has been added
+			slots[1].slot_id = 3
+			slots[1].stack_consume_size = 3
+			slots[2].slot_id = 6
+			slots[2].stack_consume_size = 1
+		12:
+			#MATERIAL TEMPLATE
+			#Material name
+			%SectionName.text = "Metal Plate"
+			#Not a weapon
+			is_weapon_recipe = false
+			#Whats being made
+			slots[0].slot_id = 17
+			#How many are being made at once
+			slots[0].stack_consume_size = 1
+			#Rest is what is being consumed
+			slots[1].slot_id = 4
+			slots[1].stack_consume_size = 2
+			slots[2].slot_id = 7
+			slots[2].stack_consume_size = 1
+		13:
+			#MATERIAL TEMPLATE
+			#Material name
+			%SectionName.text = "Nail"
+			#Not a weapon
+			is_weapon_recipe = false
+			#Whats being made
+			slots[0].slot_id = 18
+			#How many are being made at once
+			slots[0].stack_consume_size = 1
+			#Rest is what is being consumed
+			slots[1].slot_id = 3
+			slots[1].stack_consume_size = 1
+			slots[2].slot_id = 4
+			slots[2].stack_consume_size = 2
+		14:
+			#MATERIAL TEMPLATE
+			#Material name
+			%SectionName.text = "Bone dust"
+			#Not a weapon
+			is_weapon_recipe = false
+			#Whats being made
+			slots[0].slot_id = 19
+			#How many are being made at once
+			slots[0].stack_consume_size = 5
+			#Rest is what is being consumed
+			slots[1].slot_id = 7
+			slots[1].stack_consume_size = 3
+			slots[2].slot_id = 3
+			slots[2].stack_consume_size = 1
+		15:
+			#MATERIAL TEMPLATE
+			#Material name
+			%SectionName.text = "Linen"
+			#Not a weapon
+			is_weapon_recipe = false
+			#Whats being made
+			slots[0].slot_id = 20
+			#How many are being made at once
+			slots[0].stack_consume_size = 1
+			#Rest is what is being consumed
+			slots[1].slot_id = 5
+			slots[1].stack_consume_size = 2
+			slots[2].slot_id = 6
+			slots[2].stack_consume_size = 1
+			slots[3].slot_id = 3
+			slots[3].stack_consume_size = 1
+		16:
+			#WEAPON TEMPLATE
+			#Name of item
+			%SectionName.text = "Rare Firebook"
+			#is a weapon
+			is_weapon_recipe = true
+			#Keeps track of the odds of each behavior being attached to the weapon on pressing build. Each set of odds subtracts the one before it from itself.
+			#EX: [30, 40, 70, 100] --- the string associated with the 2nd index, 40, would only have a 10% chance of hitting, due to the number 30 before it.
+			behavior_odds = {25 : "Blind", 50 : "Blind", 75 : "Blind", 100 : "Blind"}
+			#Multiplier associated with the weapon. A common weapon will have 1, uncommon 2, etc. This is before the behavior affects the multiplier.
+			stat_multiplier = 3
+			#Resistances to Fire, Ice. Negative bad, positive good
+			current_resistances = [20, -15]
+			#Item_id of what is being made
+			slots[0].slot_id = 21
+			#if recipe creates multiple, you can increase this number to how many it should create
+			slots[0].stack_consume_size = 1
+			#Rest are the items being consumed
+			slots[1].slot_id = 15
+			slots[1].stack_consume_size = 1
+			slots[2].slot_id = 20
+			slots[2].stack_consume_size = 1
+			slots[3].slot_id = 12
+			slots[3].stack_consume_size = 1
+		17:
+			#WEAPON TEMPLATE
+			#Name of item
+			%SectionName.text = "Rare Crossbow"
+			#is a weapon
+			is_weapon_recipe = true
+			#Keeps track of the odds of each behavior being attached to the weapon on pressing build. Each set of odds subtracts the one before it from itself.
+			#EX: [30, 40, 70, 100] --- the string associated with the 2nd index, 40, would only have a 10% chance of hitting, due to the number 30 before it.
+			behavior_odds = {25 : "Blind", 50 : "Blind", 75 : "Blind", 100 : "Blind"}
+			#Multiplier associated with the weapon. A common weapon will have 1, uncommon 2, etc. This is before the behavior affects the multiplier.
+			stat_multiplier = 3
+			#Resistances to Fire, Ice. Negative bad, positive good
+			current_resistances = [-15, 20]
+			#Item_id of what is being made
+			slots[0].slot_id = 24
+			#if recipe creates multiple, you can increase this number to how many it should create
+			slots[0].stack_consume_size = 1
+			#Rest are the items being consumed
+			slots[1].slot_id = 13
+			slots[1].stack_consume_size = 1
+			slots[2].slot_id = 8
+			slots[2].stack_consume_size = 1
+		18:
+			#WEAPON TEMPLATE
+			#Name of item
+			%SectionName.text = "Epic Firebook"
+			#is a weapon
+			is_weapon_recipe = true
+			#Keeps track of the odds of each behavior being attached to the weapon on pressing build. Each set of odds subtracts the one before it from itself.
+			#EX: [30, 40, 70, 100] --- the string associated with the 2nd index, 40, would only have a 10% chance of hitting, due to the number 30 before it.
+			behavior_odds = {25 : "Blind", 50 : "Blind", 75 : "Blind", 100 : "Blind"}
+			#Multiplier associated with the weapon. A common weapon will have 1, uncommon 2, etc. This is before the behavior affects the multiplier.
+			stat_multiplier = 4
+			#Resistances to Fire, Ice. Negative bad, positive good
+			current_resistances = [25, -15]
+			#Item_id of what is being made
+			slots[0].slot_id = 22
+			#if recipe creates multiple, you can increase this number to how many it should create
+			slots[0].stack_consume_size = 1
+			#Rest are the items being consumed
+			slots[1].slot_id = 21
+			slots[1].stack_consume_size = 1
+			slots[2].slot_id = 3
+			slots[2].stack_consume_size = 1
+		19:
+			#WEAPON TEMPLATE
+			#Name of item
+			%SectionName.text = "Epic Crossbow"
+			#is a weapon
+			is_weapon_recipe = true
+			#Keeps track of the odds of each behavior being attached to the weapon on pressing build. Each set of odds subtracts the one before it from itself.
+			#EX: [30, 40, 70, 100] --- the string associated with the 2nd index, 40, would only have a 10% chance of hitting, due to the number 30 before it.
+			behavior_odds = {25 : "Blind", 50 : "Blind", 75 : "Blind", 100 : "Blind"}
+			#Multiplier associated with the weapon. A common weapon will have 1, uncommon 2, etc. This is before the behavior affects the multiplier.
+			stat_multiplier = 4
+			#Resistances to Fire, Ice. Negative bad, positive good
+			current_resistances = [-15, 25]
+			#Item_id of what is being made
+			slots[0].slot_id = 25
+			#if recipe creates multiple, you can increase this number to how many it should create
+			slots[0].stack_consume_size = 1
+			#Rest are the items being consumed
+			slots[1].slot_id = 24
+			slots[1].stack_consume_size = 1
+			slots[2].slot_id = 3
+			slots[2].stack_consume_size = 1
+		20:
+			#WEAPON TEMPLATE
+			#Name of item
+			%SectionName.text = "Legendary Firebook"
+			#is a weapon
+			is_weapon_recipe = true
+			#Keeps track of the odds of each behavior being attached to the weapon on pressing build. Each set of odds subtracts the one before it from itself.
+			#EX: [30, 40, 70, 100] --- the string associated with the 2nd index, 40, would only have a 10% chance of hitting, due to the number 30 before it.
+			behavior_odds = {25 : "Blind", 50 : "Blind", 75 : "Blind", 100 : "Blind"}
+			#Multiplier associated with the weapon. A common weapon will have 1, uncommon 2, etc. This is before the behavior affects the multiplier.
+			stat_multiplier = 5
+			#Resistances to Fire, Ice. Negative bad, positive good
+			current_resistances = [30, -15]
+			#Item_id of what is being made
+			slots[0].slot_id = 23
+			#if recipe creates multiple, you can increase this number to how many it should create
+			slots[0].stack_consume_size = 1
+			#Rest are the items being consumed
+			slots[1].slot_id = 22
+			slots[1].stack_consume_size = 1
+			slots[2].slot_id = 3
+			slots[2].stack_consume_size = 1
+		21:
+			#WEAPON TEMPLATE
+			#Name of item
+			%SectionName.text = "Legendary Crossbow"
+			#is a weapon
+			is_weapon_recipe = true
+			#Keeps track of the odds of each behavior being attached to the weapon on pressing build. Each set of odds subtracts the one before it from itself.
+			#EX: [30, 40, 70, 100] --- the string associated with the 2nd index, 40, would only have a 10% chance of hitting, due to the number 30 before it.
+			behavior_odds = {25 : "Blind", 50 : "Blind", 75 : "Blind", 100 : "Blind"}
+			#Multiplier associated with the weapon. A common weapon will have 1, uncommon 2, etc. This is before the behavior affects the multiplier.
+			stat_multiplier = 5
+			#Resistances to Fire, Ice. Negative bad, positive good
+			current_resistances = [-15, 30]
+			#Item_id of what is being made
+			slots[0].slot_id = 26
+			#if recipe creates multiple, you can increase this number to how many it should create
+			slots[0].stack_consume_size = 1
+			#Rest are the items being consumed
+			slots[1].slot_id = 25
+			slots[1].stack_consume_size = 1
+			slots[2].slot_id = 3
+			slots[2].stack_consume_size = 1
 		#-=+=- WORK AREA END -=+=-
 	#Spawns new recipe items based on the new recipe
 	spawn_recipe_item(slots[0].slot_id, slots[0].stack_consume_size, false)

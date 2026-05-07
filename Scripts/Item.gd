@@ -34,16 +34,16 @@ var weapon_behavior : String
 #Uncommon Weapons are made from the Common Weapon below it AND at least 1 Uncommon Material. Rare weapons and onwards follow this trend.
 #-=+=- WORK AREA -=+=-
 var basic_materials : Array[int] = [3,4,5,6,7]
-var common_materials : Array[int] = [8,9,10,11]
-var uncommon_materials : Array[int] = [12]
+var common_materials : Array[int] = [9,10,11,16,17,18,19,20]
+var uncommon_materials : Array[int] = [8, 12, 14]
 var rare_materials : Array[int] = []
 var epic_materials : Array[int] = []
 var legendary_materials : Array[int] =[]
 var common_weapons : Array[int] = [1,2]
-var uncommon_weapons : Array[int] = [13]
-var rare_weapons : Array[int] = []
-var epic_weapons : Array[int] = []
-var legendary_weapons : Array[int] = []
+var uncommon_weapons : Array[int] = [13, 15]
+var rare_weapons : Array[int] = [21,24]
+var epic_weapons : Array[int] = [22,25]
+var legendary_weapons : Array[int] = [23,26]
 #-=+=- WORK AREA END -=+=-
 
 #Basic, Common, Uncommon, Rare, Epic, Legendary
@@ -92,6 +92,18 @@ static func get_material_description(temp_id : int) -> String:
 			temp_desc = "Leather that has been cured with chemicals."
 		12:
 			temp_desc = "Shiny ingot made of pure gold."
+		14:
+			temp_desc = "Essence of magical fire."
+		16:
+			temp_desc = "High quality planks."
+		17:
+			temp_desc = "A metal plate ready to be shaped."
+		18: 
+			temp_desc = "High quality nail."
+		19: 
+			temp_desc = "Bones dust from ethical bones."
+		20:
+			temp_desc = "High quality linen."
 	return temp_desc
 #-=+=- WORK AREA END -=+=-
 

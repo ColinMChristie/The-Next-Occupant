@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://centulcm2utku"]
+[gd_scene format=3 uid="uid://centulcm2utku"]
 
 [ext_resource type="Texture2D" uid="uid://txrri7fvilvp" path="res://Sprites/Pages/Page9Tile.png" id="1_6m2mc"]
 [ext_resource type="Script" uid="uid://0al0cnxk1nsq" path="res://Scripts/FightPage.gd" id="2_wlniw"]
@@ -8,10 +8,24 @@
 [ext_resource type="Script" uid="uid://crsbgie34kdsa" path="res://Scripts/BlueprintButton.gd" id="6_r3j3s"]
 [ext_resource type="Texture2D" uid="uid://cfwnkxc6pn56f" path="res://Sprites/Pages/Items/FireBookItem.png" id="7_lmf8x"]
 [ext_resource type="Texture2D" uid="uid://c8806diom8rgp" path="res://Sprites/Pages/Items/ReinforcedPlank.png" id="8_0rbwc"]
+[ext_resource type="Texture2D" uid="uid://dnluhw5u0flvc" path="res://Sprites/Pages/Items/Uncommon_FireBook.png" id="9_d8rhx"]
 [ext_resource type="Texture2D" uid="uid://6hquhcj2a1lx" path="res://Sprites/Pages/Items/crossbow bolt.png" id="9_kq6t1"]
 [ext_resource type="Texture2D" uid="uid://dhs54r5x28bnj" path="res://Sprites/Pages/Items/MagicGoo.png" id="10_3axxm"]
+[ext_resource type="Texture2D" uid="uid://behapqkhewyhh" path="res://Sprites/Pages/Items/Uncommon_Crossbow.png" id="10_emth0"]
+[ext_resource type="Texture2D" uid="uid://bcxjja7dimq3t" path="res://Sprites/Pages/Items/Rare_Crossbow.png" id="11_rdkib"]
 [ext_resource type="Texture2D" uid="uid://qwm4ifflbewx" path="res://Sprites/Pages/Items/Leather.png" id="11_wxens"]
+[ext_resource type="Texture2D" uid="uid://blf1pddxq8a1v" path="res://Sprites/Pages/Items/Epic_Crossbow.png" id="12_of5mj"]
+[ext_resource type="Texture2D" uid="uid://bd66p5phlbcg2" path="res://Sprites/Pages/Items/FireEssence.png" id="13_lmf8x"]
+[ext_resource type="Texture2D" uid="uid://cmk8jad0p0qja" path="res://Sprites/Pages/Items/Legendary_crossbow.png" id="13_of5mj"]
 [ext_resource type="Texture2D" uid="uid://dna5g2f4qsxc1" path="res://Sprites/Pages/Items/Gold.png" id="13_r3j3s"]
+[ext_resource type="Texture2D" uid="uid://d2ahqbiwrqdfa" path="res://Sprites/Pages/Items/Rare_FireBook.png" id="14_1xgun"]
+[ext_resource type="Texture2D" uid="uid://c4idu487h1lth" path="res://Sprites/Pages/Items/Planks.png" id="15_0rbwc"]
+[ext_resource type="Texture2D" uid="uid://c6j7b2chegk2y" path="res://Sprites/Pages/Items/Epic_FireBook.png" id="15_t324x"]
+[ext_resource type="Texture2D" uid="uid://dhv7g230runkl" path="res://Sprites/Pages/Items/Legendary_FireBook.png" id="16_rq4ms"]
+[ext_resource type="Texture2D" uid="uid://uu6al15y72ut" path="res://Sprites/Pages/Items/MetalPlate.png" id="16_wxens"]
+[ext_resource type="Texture2D" uid="uid://8wilnm8slwo4" path="res://Sprites/Pages/Items/Nail.png" id="17_6m2mc"]
+[ext_resource type="Texture2D" uid="uid://ceispfxn0ipih" path="res://Sprites/Pages/Items/BoneDust.png" id="18_wlniw"]
+[ext_resource type="Texture2D" uid="uid://c2nm6f8buyidb" path="res://Sprites/Pages/Items/Linen.png" id="19_6m2mc"]
 [ext_resource type="Texture2D" uid="uid://lehsmbalk67h" path="res://Sprites/Pages/ArrowIdle.png" id="19_7nmjq"]
 [ext_resource type="Texture2D" uid="uid://cv1rgg4fk5oqa" path="res://Sprites/Pages/ArrowSelect.png" id="20_2a1gw"]
 [ext_resource type="Texture2D" uid="uid://datttrxjgkps8" path="res://Sprites/Pages/ArrowFocus.png" id="21_ut2xx"]
@@ -53,7 +67,7 @@ expand_margin_right = 5.0
 shadow_size = 2
 shadow_offset = Vector2(-2, 2)
 
-[node name="BlueprintPage" type="NinePatchRect"]
+[node name="BlueprintPage" type="NinePatchRect" unique_id=844751802]
 texture_filter = 1
 custom_minimum_size = Vector2(239, 324)
 offset_right = 239.0
@@ -68,14 +82,14 @@ axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 script = ExtResource("2_wlniw")
 
-[node name="BlueprintSlots" type="Control" parent="."]
+[node name="BlueprintSlots" type="Control" parent="." unique_id=1085790708]
 unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("3_tf1dl")
 
-[node name="WeaponBlueprints" type="GridContainer" parent="BlueprintSlots"]
+[node name="WeaponBlueprints" type="GridContainer" parent="BlueprintSlots" unique_id=589028822]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
@@ -87,7 +101,7 @@ theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 5
 columns = 4
 
-[node name="Blueprint1" type="Button" parent="BlueprintSlots/WeaponBlueprints"]
+[node name="Blueprint1" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=1616270956]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -102,7 +116,7 @@ icon = ExtResource("5_kcmp8")
 script = ExtResource("6_r3j3s")
 recipe_id = 1
 
-[node name="Blueprint4" type="Button" parent="BlueprintSlots/WeaponBlueprints"]
+[node name="Blueprint4" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=402755645]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -117,7 +131,7 @@ icon = ExtResource("7_lmf8x")
 script = ExtResource("6_r3j3s")
 recipe_id = 4
 
-[node name="Blueprint8" type="Button" parent="BlueprintSlots/WeaponBlueprints"]
+[node name="Blueprint10" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=365210139]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -128,11 +142,116 @@ theme_override_font_sizes/font_size = 23
 theme_override_styles/normal = ExtResource("5_r3j3s")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
-icon = ExtResource("5_kcmp8")
+icon = ExtResource("9_d8rhx")
+script = ExtResource("6_r3j3s")
+recipe_id = 10
+
+[node name="Blueprint8" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=161940032]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("10_emth0")
 script = ExtResource("6_r3j3s")
 recipe_id = 8
 
-[node name="MaterialBlueprints" type="GridContainer" parent="BlueprintSlots"]
+[node name="Blueprint17" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=475515341]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("11_rdkib")
+script = ExtResource("6_r3j3s")
+recipe_id = 17
+
+[node name="Blueprint19" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=216337992]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("12_of5mj")
+script = ExtResource("6_r3j3s")
+recipe_id = 19
+
+[node name="Blueprint21" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=1539301210]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("13_of5mj")
+script = ExtResource("6_r3j3s")
+recipe_id = 21
+
+[node name="Blueprint16" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=259236204]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("14_1xgun")
+script = ExtResource("6_r3j3s")
+recipe_id = 16
+
+[node name="Blueprint18" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=986177530]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("15_t324x")
+script = ExtResource("6_r3j3s")
+recipe_id = 18
+
+[node name="Blueprint20" type="Button" parent="BlueprintSlots/WeaponBlueprints" unique_id=542926538]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("16_rq4ms")
+script = ExtResource("6_r3j3s")
+recipe_id = 20
+
+[node name="MaterialBlueprints" type="GridContainer" parent="BlueprintSlots" unique_id=382611000]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(32, 32)
@@ -145,7 +264,7 @@ theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 5
 columns = 4
 
-[node name="Blueprint2" type="Button" parent="BlueprintSlots/MaterialBlueprints"]
+[node name="Blueprint2" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=269596490]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -160,7 +279,7 @@ icon = ExtResource("8_0rbwc")
 script = ExtResource("6_r3j3s")
 recipe_id = 2
 
-[node name="Blueprint3" type="Button" parent="BlueprintSlots/MaterialBlueprints"]
+[node name="Blueprint3" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=1415376596]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -175,7 +294,7 @@ icon = ExtResource("9_kq6t1")
 script = ExtResource("6_r3j3s")
 recipe_id = 3
 
-[node name="Blueprint5" type="Button" parent="BlueprintSlots/MaterialBlueprints"]
+[node name="Blueprint5" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=262028006]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -190,7 +309,7 @@ icon = ExtResource("10_3axxm")
 script = ExtResource("6_r3j3s")
 recipe_id = 5
 
-[node name="Blueprint6" type="Button" parent="BlueprintSlots/MaterialBlueprints"]
+[node name="Blueprint6" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=602047378]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -205,7 +324,22 @@ icon = ExtResource("11_wxens")
 script = ExtResource("6_r3j3s")
 recipe_id = 6
 
-[node name="Blueprint7" type="Button" parent="BlueprintSlots/MaterialBlueprints"]
+[node name="Blueprint9" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=1498121582]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("13_lmf8x")
+script = ExtResource("6_r3j3s")
+recipe_id = 9
+
+[node name="Blueprint7" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=2095958723]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -220,7 +354,82 @@ icon = ExtResource("13_r3j3s")
 script = ExtResource("6_r3j3s")
 recipe_id = 7
 
-[node name="RightArrow" type="TextureButton" parent="."]
+[node name="Blueprint11" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=2015183514]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("15_0rbwc")
+script = ExtResource("6_r3j3s")
+recipe_id = 11
+
+[node name="Blueprint12" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=2135370895]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("16_wxens")
+script = ExtResource("6_r3j3s")
+recipe_id = 12
+
+[node name="Blueprint13" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=1873431949]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("17_6m2mc")
+script = ExtResource("6_r3j3s")
+recipe_id = 13
+
+[node name="Blueprint14" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=421612080]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("18_wlniw")
+script = ExtResource("6_r3j3s")
+recipe_id = 14
+
+[node name="Blueprint15" type="Button" parent="BlueprintSlots/MaterialBlueprints" unique_id=1696893337]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("22_5cb7l")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = ExtResource("5_r3j3s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wlniw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_emth0")
+icon = ExtResource("19_6m2mc")
+script = ExtResource("6_r3j3s")
+recipe_id = 15
+
+[node name="RightArrow" type="TextureButton" parent="." unique_id=141232833]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 275.0
@@ -230,7 +439,7 @@ texture_normal = ExtResource("19_7nmjq")
 texture_pressed = ExtResource("20_2a1gw")
 texture_hover = ExtResource("21_ut2xx")
 
-[node name="LeftArrow" type="TextureButton" parent="."]
+[node name="LeftArrow" type="TextureButton" parent="." unique_id=913563408]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 275.0
@@ -241,7 +450,7 @@ texture_pressed = ExtResource("20_2a1gw")
 texture_hover = ExtResource("21_ut2xx")
 flip_h = true
 
-[node name="SectionName" type="RichTextLabel" parent="."]
+[node name="SectionName" type="RichTextLabel" parent="." unique_id=891552311]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 74.0
@@ -258,7 +467,7 @@ theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "Weapons & Armor"
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=574345097]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 11.0
@@ -277,11 +486,24 @@ horizontal_alignment = 1
 
 [connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint1" to="BlueprintSlots/WeaponBlueprints/Blueprint1" method="_on_pressed"]
 [connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint4" to="BlueprintSlots/WeaponBlueprints/Blueprint4" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint10" to="BlueprintSlots/WeaponBlueprints/Blueprint10" method="_on_pressed"]
 [connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint8" to="BlueprintSlots/WeaponBlueprints/Blueprint8" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint17" to="BlueprintSlots/WeaponBlueprints/Blueprint17" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint19" to="BlueprintSlots/WeaponBlueprints/Blueprint19" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint21" to="BlueprintSlots/WeaponBlueprints/Blueprint21" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint16" to="BlueprintSlots/WeaponBlueprints/Blueprint16" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint18" to="BlueprintSlots/WeaponBlueprints/Blueprint18" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/WeaponBlueprints/Blueprint20" to="BlueprintSlots/WeaponBlueprints/Blueprint20" method="_on_pressed"]
 [connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint2" to="BlueprintSlots/MaterialBlueprints/Blueprint2" method="_on_pressed"]
 [connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint3" to="BlueprintSlots/MaterialBlueprints/Blueprint3" method="_on_pressed"]
 [connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint5" to="BlueprintSlots/MaterialBlueprints/Blueprint5" method="_on_pressed"]
 [connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint6" to="BlueprintSlots/MaterialBlueprints/Blueprint6" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint9" to="BlueprintSlots/MaterialBlueprints/Blueprint9" method="_on_pressed"]
 [connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint7" to="BlueprintSlots/MaterialBlueprints/Blueprint7" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint11" to="BlueprintSlots/MaterialBlueprints/Blueprint11" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint12" to="BlueprintSlots/MaterialBlueprints/Blueprint12" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint13" to="BlueprintSlots/MaterialBlueprints/Blueprint13" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint14" to="BlueprintSlots/MaterialBlueprints/Blueprint14" method="_on_pressed"]
+[connection signal="pressed" from="BlueprintSlots/MaterialBlueprints/Blueprint15" to="BlueprintSlots/MaterialBlueprints/Blueprint15" method="_on_pressed"]
 [connection signal="pressed" from="RightArrow" to="BlueprintSlots" method="_on_right_arrow_pressed"]
 [connection signal="pressed" from="LeftArrow" to="BlueprintSlots" method="_on_left_arrow_pressed"]

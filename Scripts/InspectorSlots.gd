@@ -57,6 +57,32 @@ func change_inspector(item_num : int, is_recipe : bool, weapon_behavior : String
 			%ItemName.text = "Gold Ingot"
 		13:
 			%ItemName.text = "Uncommon Crossbow"
+		14: 
+			%ItemName.text = "Essence of Fire"
+		15:
+			%ItemName.text = "Uncommon Fire Book"
+		16:
+			%ItemName.text = "Planks"
+		17:
+			%ItemName.text = "Metal plate"
+		18:
+			%ItemName.text = "Nail"
+		19:
+			%ItemName.text = "Bone dust"
+		20:
+			%ItemName.text = "Linen"
+		21:
+			%ItemName.text = "Rare Firebook"
+		22:
+			%ItemName.text = "Epic Firebook"
+		23:
+			%ItemName.text = "Legendary Firebook"
+		24:
+			%ItemName.text = "Rare Crossbow"
+		25:
+			%ItemName.text = "Epic Crossbow"
+		26:
+			%ItemName.text = "Legendary Crossbow"
 		1001:
 			%ItemName.text = "\nArcher"
 		1002:
