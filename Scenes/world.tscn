@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ccg14osyn8234"]
+[gd_scene load_steps=23 format=3 uid="uid://ccg14osyn8234"]
 
 [ext_resource type="Script" uid="uid://cpd8cr3nep7r7" path="res://Scripts/World.gd" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://b3v5goea8hs27" path="res://Scenes/Heroes/Archer.tscn" id="2_8j60k"]
@@ -13,7 +13,9 @@
 [ext_resource type="Script" uid="uid://ds2vwpr434diy" path="res://Scripts/Background.gd" id="11_e0ngr"]
 [ext_resource type="Texture2D" uid="uid://v5ffuynytrhy" path="res://Sprites/Pages/Arena/Leaf.png" id="11_ikia7"]
 [ext_resource type="Texture2D" uid="uid://qayukm8dbnrk" path="res://Sprites/Pages/Arena/WaterfallVersion3.png" id="13_e0ngr"]
+[ext_resource type="Texture2D" uid="uid://cf6fs1u3qtruc" path="res://Sprites/Pages/Arena/Flowers.png" id="13_hgpy0"]
 [ext_resource type="Texture2D" uid="uid://clueo45e6m4le" path="res://Sprites/Pages/Arena/JungleLayer2.png" id="13_kn0ld"]
+[ext_resource type="Texture2D" uid="uid://bdhdbho367jiy" path="res://Sprites/Pages/Arena/WaterfallVersionTest2.png" id="14_kn0ld"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kn0ld"]
 atlas = ExtResource("13_e0ngr")
@@ -89,16 +91,23 @@ scale = Vector2(1.1, 1.1)
 script = ExtResource("11_e0ngr")
 offset = -120.0
 
-[node name="Leaf2" type="TextureRect" parent="Foreground"]
+[node name="LeafBunch" type="Control" parent="Foreground"]
+anchors_preset = 0
+offset_left = -23.214472
+offset_top = -16.137583
+offset_right = 16.785528
+offset_bottom = 23.862417
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafBunch"]
 texture_filter = 1
 layout_mode = 0
 offset_left = -18.0
-offset_top = -18.0
+offset_top = -17.999939
 offset_right = 136.0
-offset_bottom = 127.0
+offset_bottom = 127.00006
 texture = ExtResource("11_ikia7")
 
-[node name="Leaf3" type="TextureRect" parent="Foreground"]
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafBunch"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 24.0
@@ -108,7 +117,1392 @@ offset_bottom = 136.0
 rotation = -0.27576202
 texture = ExtResource("11_ikia7")
 
-[node name="Leaf" type="TextureRect" parent="Foreground"]
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafBunch"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch2" type="Control" parent="Foreground"]
+anchors_preset = 0
+offset_left = 5.87648
+offset_top = 944.7716
+offset_right = 35.976475
+offset_bottom = 989.1716
+rotation = -1.7836072
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafBunch2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafBunch2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafBunch2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafWall" type="Control" parent="Foreground"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeafBunch3" type="Control" parent="Foreground/LeafWall"]
+anchors_preset = 0
+offset_left = -81.39626
+offset_top = 194.77155
+offset_right = -41.396263
+offset_bottom = 234.77155
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch4" type="Control" parent="Foreground/LeafWall"]
+anchors_preset = 0
+offset_left = -65.03263
+offset_top = 330.22607
+offset_right = -25.03263
+offset_bottom = 370.22607
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch5" type="Control" parent="Foreground/LeafWall"]
+anchors_preset = 0
+offset_left = -87.75988
+offset_top = 732.95337
+offset_right = -47.75988
+offset_bottom = 772.95337
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch7" type="Control" parent="Foreground/LeafWall"]
+anchors_preset = 0
+offset_left = -77.759895
+offset_top = 454.77158
+offset_right = -37.759895
+offset_bottom = 494.77158
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch6" type="Control" parent="Foreground/LeafWall"]
+anchors_preset = 0
+offset_left = -82.30535
+offset_top = 587.4988
+offset_right = -42.30535
+offset_bottom = 627.4988
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafWall2" type="Control" parent="Foreground"]
+anchors_preset = 0
+offset_left = -17.759918
+offset_top = 907.49884
+offset_right = 22.240082
+offset_bottom = 947.49884
+rotation = -1.5582266
+
+[node name="LeafBunch3" type="Control" parent="Foreground/LeafWall2"]
+anchors_preset = 0
+offset_left = -81.39626
+offset_top = 194.77155
+offset_right = -41.396263
+offset_bottom = 234.77155
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch4" type="Control" parent="Foreground/LeafWall2"]
+anchors_preset = 0
+offset_left = -65.03263
+offset_top = 330.22607
+offset_right = -25.03263
+offset_bottom = 370.22607
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch5" type="Control" parent="Foreground/LeafWall2"]
+anchors_preset = 0
+offset_left = -87.75988
+offset_top = 732.95337
+offset_right = -47.75988
+offset_bottom = 772.95337
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch7" type="Control" parent="Foreground/LeafWall2"]
+anchors_preset = 0
+offset_left = -77.759895
+offset_top = 454.77158
+offset_right = -37.759895
+offset_bottom = 494.77158
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch6" type="Control" parent="Foreground/LeafWall2"]
+anchors_preset = 0
+offset_left = -82.30535
+offset_top = 587.4988
+offset_right = -42.30535
+offset_bottom = 627.4988
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall2/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafWall6" type="Control" parent="Foreground"]
+anchors_preset = 0
+offset_left = 673.1492
+offset_top = 905.6805
+offset_right = 713.1492
+offset_bottom = 945.6805
+rotation = -1.5582266
+
+[node name="LeafBunch3" type="Control" parent="Foreground/LeafWall6"]
+anchors_preset = 0
+offset_left = -81.39626
+offset_top = 194.77155
+offset_right = -41.396263
+offset_bottom = 234.77155
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch4" type="Control" parent="Foreground/LeafWall6"]
+anchors_preset = 0
+offset_left = -65.03263
+offset_top = 330.22607
+offset_right = -25.03263
+offset_bottom = 370.22607
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch5" type="Control" parent="Foreground/LeafWall6"]
+anchors_preset = 0
+offset_left = -87.75988
+offset_top = 732.95337
+offset_right = -47.75988
+offset_bottom = 772.95337
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch7" type="Control" parent="Foreground/LeafWall6"]
+anchors_preset = 0
+offset_left = -77.759895
+offset_top = 454.77158
+offset_right = -37.759895
+offset_bottom = 494.77158
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch6" type="Control" parent="Foreground/LeafWall6"]
+anchors_preset = 0
+offset_left = -82.30535
+offset_top = 587.4988
+offset_right = -42.30535
+offset_bottom = 627.4988
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall6/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafWall7" type="Control" parent="Foreground"]
+anchors_preset = 0
+offset_left = 1364.0583
+offset_top = 912.95325
+offset_right = 1404.0583
+offset_bottom = 952.95325
+rotation = -1.5582266
+
+[node name="LeafBunch3" type="Control" parent="Foreground/LeafWall7"]
+anchors_preset = 0
+offset_left = -81.39626
+offset_top = 194.77155
+offset_right = -41.396263
+offset_bottom = 234.77155
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch4" type="Control" parent="Foreground/LeafWall7"]
+anchors_preset = 0
+offset_left = -65.03263
+offset_top = 330.22607
+offset_right = -25.03263
+offset_bottom = 370.22607
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch5" type="Control" parent="Foreground/LeafWall7"]
+anchors_preset = 0
+offset_left = -87.75988
+offset_top = 732.95337
+offset_right = -47.75988
+offset_bottom = 772.95337
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch7" type="Control" parent="Foreground/LeafWall7"]
+anchors_preset = 0
+offset_left = -77.759895
+offset_top = 454.77158
+offset_right = -37.759895
+offset_bottom = 494.77158
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch6" type="Control" parent="Foreground/LeafWall7"]
+anchors_preset = 0
+offset_left = -82.30535
+offset_top = 587.4988
+offset_right = -42.30535
+offset_bottom = 627.4988
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall7/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafWall3" type="Control" parent="Foreground"]
+anchors_preset = 0
+offset_left = 910.4219
+offset_top = 2.0442047
+offset_right = 950.4219
+offset_bottom = 42.044205
+rotation = -4.7226563
+
+[node name="LeafBunch3" type="Control" parent="Foreground/LeafWall3"]
+anchors_preset = 0
+offset_left = -81.39626
+offset_top = 194.77155
+offset_right = -41.396263
+offset_bottom = 234.77155
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch4" type="Control" parent="Foreground/LeafWall3"]
+anchors_preset = 0
+offset_left = -65.03263
+offset_top = 330.22607
+offset_right = -25.03263
+offset_bottom = 370.22607
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch5" type="Control" parent="Foreground/LeafWall3"]
+anchors_preset = 0
+offset_left = -87.75988
+offset_top = 732.95337
+offset_right = -47.75988
+offset_bottom = 772.95337
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch7" type="Control" parent="Foreground/LeafWall3"]
+anchors_preset = 0
+offset_left = -77.759895
+offset_top = 454.77158
+offset_right = -37.759895
+offset_bottom = 494.77158
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch6" type="Control" parent="Foreground/LeafWall3"]
+anchors_preset = 0
+offset_left = -82.30535
+offset_top = 587.4988
+offset_right = -42.30535
+offset_bottom = 627.4988
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall3/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafWall4" type="Control" parent="Foreground"]
+anchors_preset = 0
+offset_left = 1582.24
+offset_top = 0.22599316
+offset_right = 1622.24
+offset_bottom = 40.225994
+rotation = -4.7226563
+
+[node name="LeafBunch3" type="Control" parent="Foreground/LeafWall4"]
+anchors_preset = 0
+offset_left = -81.39626
+offset_top = 194.77155
+offset_right = -41.396263
+offset_bottom = 234.77155
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch4" type="Control" parent="Foreground/LeafWall4"]
+anchors_preset = 0
+offset_left = -65.03263
+offset_top = 330.22607
+offset_right = -25.03263
+offset_bottom = 370.22607
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch5" type="Control" parent="Foreground/LeafWall4"]
+anchors_preset = 0
+offset_left = -87.75988
+offset_top = 732.95337
+offset_right = -47.75988
+offset_bottom = 772.95337
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch7" type="Control" parent="Foreground/LeafWall4"]
+anchors_preset = 0
+offset_left = -77.759895
+offset_top = 454.77158
+offset_right = -37.759895
+offset_bottom = 494.77158
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch6" type="Control" parent="Foreground/LeafWall4"]
+anchors_preset = 0
+offset_left = -82.30535
+offset_top = 587.4988
+offset_right = -42.30535
+offset_bottom = 627.4988
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall4/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafWall5" type="Control" parent="Foreground"]
+anchors_preset = 0
+offset_left = 2237.6946
+offset_top = -3.4103992
+offset_right = 2277.6946
+offset_bottom = 36.5896
+rotation = -4.7226563
+
+[node name="LeafBunch3" type="Control" parent="Foreground/LeafWall5"]
+anchors_preset = 0
+offset_left = -81.39626
+offset_top = 194.77155
+offset_right = -41.396263
+offset_bottom = 234.77155
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch4" type="Control" parent="Foreground/LeafWall5"]
+anchors_preset = 0
+offset_left = -65.03263
+offset_top = 330.22607
+offset_right = -25.03263
+offset_bottom = 370.22607
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch4"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch5" type="Control" parent="Foreground/LeafWall5"]
+anchors_preset = 0
+offset_left = -87.75988
+offset_top = 732.95337
+offset_right = -47.75988
+offset_bottom = 772.95337
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch5"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch7" type="Control" parent="Foreground/LeafWall5"]
+anchors_preset = 0
+offset_left = -77.759895
+offset_top = 454.77158
+offset_right = -37.759895
+offset_bottom = 494.77158
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch7"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 151.0
+rotation = 0.55152404
+texture = ExtResource("11_ikia7")
+
+[node name="LeafBunch6" type="Control" parent="Foreground/LeafWall5"]
+anchors_preset = 0
+offset_left = -82.30535
+offset_top = 587.4988
+offset_right = -42.30535
+offset_bottom = 627.4988
+rotation = -0.8250014
+
+[node name="Leaf2" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -18.0
+offset_top = -17.999939
+offset_right = 136.0
+offset_bottom = 127.00006
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf3" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch6"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 178.0
+offset_bottom = 136.0
+rotation = -0.27576202
+texture = ExtResource("11_ikia7")
+
+[node name="Leaf" type="TextureRect" parent="Foreground/LeafWall5/LeafBunch6"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 4.0
@@ -122,7 +1516,8 @@ texture = ExtResource("11_ikia7")
 z_index = -5
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = -29.0
+offset_right = 11.0
 offset_bottom = 40.0
 script = ExtResource("11_e0ngr")
 speed_scale = 2.0
@@ -143,14 +1538,21 @@ sprite_frames = SubResource("SpriteFrames_1cojt")
 autoplay = "default"
 frame_progress = 0.46762875
 
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundFarthest/Waterfall"]
+texture_filter = 1
+position = Vector2(-99.97, 410)
+scale = Vector2(3.4, 3.4)
+texture = ExtResource("13_hgpy0")
+
 [node name="BackgroundMiddle" type="Control" parent="."]
 z_index = -4
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = -29.0
+offset_right = 11.0
 offset_bottom = 40.0
 script = ExtResource("11_e0ngr")
-speed_scale = 4.0
+speed_scale = 2.1
 offset = -120.0
 
 [node name="Sprite2D" type="Sprite2D" parent="BackgroundMiddle"]
@@ -158,6 +1560,23 @@ texture_filter = 1
 position = Vector2(463, 271.99997)
 scale = Vector2(3.4, 3.4)
 texture = ExtResource("13_kn0ld")
+
+[node name="BackgroundFront" type="Control" parent="."]
+z_index = -3
+layout_mode = 3
+anchors_preset = 0
+offset_left = -29.0
+offset_right = 11.0
+offset_bottom = 40.0
+script = ExtResource("11_e0ngr")
+speed_scale = 2.2
+offset = -120.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundFront"]
+texture_filter = 1
+position = Vector2(437, 550)
+scale = Vector2(3.4, 3.4)
+texture = ExtResource("14_kn0ld")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true

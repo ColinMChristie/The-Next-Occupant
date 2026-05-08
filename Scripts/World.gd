@@ -29,6 +29,9 @@ signal everything_spawned
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
+	#spawn_pages()
+
+func spawn_pages() -> void:
 	add_inventory()
 	add_recipe_page()
 	add_blueprint_page()
